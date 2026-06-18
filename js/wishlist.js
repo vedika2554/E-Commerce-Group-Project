@@ -194,3 +194,42 @@ removeSelectedBtn.addEventListener("click",() => {
         renderWishlist();
         showToast("Selected items removed" );
     } );
+
+    moveSelectedBtn.addEventListener( "click",() => {
+        const selected = getSelectedIds();
+        if(!selected.length){
+            showToast("Select items first");
+            return;
+        }
+        const wishlist = getWishlist();
+        selected.forEach(id => {
+            const product = wishlist.find(item => item.id === id );
+            if(product){
+                addToCart(product);
+            }
+        });
+
+        const remaining = wishlist.filter( product => !selected.includes(product.id ) );
+        saveWishlist(remaining );
+        renderWishlist();
+        showToast("Moved to cart" );
+    } );
+
+searchInput.addEventListener("input", renderWishlist);
+sortSelect.addEventListener("change", renderWishlist );
+copyLinkBtn.addEventListener("click", async () => {
+        try{
+            await navigator.clipboard
+            .writeText(window.location.href);
+            showToast("Link copied" );
+        }
+        catch{ 
+            showToast("Copy failed" );
+        }
+    } );
+
+whatsappBtn.addEventListener( "click",() => {
+        const text = encodeURIComponent( window.location.href );
+        window.open( `https://wa.me/?text=${text}`, "_blank");
+    } );
+renderWishlist();
