@@ -47,3 +47,18 @@ setInterval(nextSlide, 4000);
 function openProducts() {
     window.location.href = "products.html";
 }
+
+// category section
+function openProducts() {
+    window.location.href = "products.html";
+}
+
+// feature product 
+function addToCart(productName) {
+    alert(productName + " added to cart!");
+}
+
+// click on img
+function openProductDetails() {
+    window.location.href = "product-details.html";
+}
