@@ -61,3 +61,27 @@ header
     font-size: 1rem;
     transition: 0.3s;
 }
+/* responsive */
+@media(max-width:768px) {
+
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        background: #111827;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px 0;
+        display: none;
+    }
+
+    .nav-links.active {
+        display: flex !important;
+}
+}
