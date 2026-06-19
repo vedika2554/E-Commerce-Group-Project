@@ -3,133 +3,99 @@
 <head>
     <title>My Wishlist</title>
     <link rel="stylesheet" href="./../css/wishlist.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link
+        rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
-    <div class="wishlist-container">
-    <section class="page-header">
+<div class="wishlist-page">
+    <div class="wishlist-header">
         <div>
-            <h1>My Wishlist</h1>
-            <p>Manage your favorite products</p>
+            <h1>My Wishlist 💗</h1>
+            <p>Save your favorite products for later</p>
         </div>
-        <a href="./../pages/product.html" class="shopping-btn"> Continue Shopping</a>
-    </section>
-    
-    <section class="toolbar">
+
+        <div class="header-actions">
+            <button id="shareWishlistBtn" class="small-btn"> <i class="fa-solid fa-share-nodes"></i></button>
+            <button id="copyLinkBtn" class="small-btn"><i class="fa-solid fa-link"></i> </button>
+        </div>
+    </div>
+
+    <div class="top-controls">
         <div class="search-box">
             <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="text"id="searchInput" placeholder="Search wishlist..." >
+            <input type="text" id="searchInput" placeholder="Search wishlist products..." >
         </div>
-        <div class="sort-box">
-            <select id="sortSelect">
-                <option value="latest">Recently Added</option>
-                <option value="oldest">Oldest Added</option>
-                <option value="nameAsc"> Name A-Z </option>
-                <option value="nameDesc">Name Z-A </option>
-                <option value="priceLow"> Price Low → High </option>
-                <option value="priceHigh"> Price High → Low </option>
-            </select>
-        </div>
-    </section>
+        <select id="sortSelect">
+            <option value="default">Sort Products</option>
+            <option value="name-asc">Name A-Z </option>
+            <option value="name-desc"> Name Z-A </option>
+            <option value="price-low"> Price Low → High </option>
+            <option value="price-high"> Price High → Low </option>
+        </select>
+    </div>
 
-    <section class="summary-grid">
+    <div class="summary-grid">
         <div class="summary-card">
-            <div class="summary-icon">
-                <i class="fa-regular fa-heart"></i>
-            </div>
-            <div>
-                <h3 id="totalItems">0</h3>
-                <p>Total Items</p>
-            </div>
+            <span>Total Items</span>
+            <h2 id="totalItems">0</h2>
         </div>
+
         <div class="summary-card">
-            <div class="summary-icon">
-                <i class="fa-solid fa-indian-rupee-sign"></i>
-            </div>
-            <div>
-                <h3 id="estimatedTotal">₹0</h3>
-                <p>Estimated Total</p>
-            </div>
+            <span>Selected</span>
+            <h2 id="selectedItems"> 0 </h2>
         </div>
+
         <div class="summary-card">
-            <div class="summary-icon">
-                <i class="fa-solid fa-tags"></i>
-            </div>
-            <div>
-                <h3 id="totalSavings">₹0</h3>
-                <p>Total Savings</p>
-            </div>
+            <span>Total Value</span>
+            <h2 id="totalValue">  ₹0 </h2>
         </div>
-        <div class="summary-card">
-            <div class="summary-icon">
-                <i class="fa-solid fa-check"></i>
-            </div>
-            <div>
-                <h3 id="selectedItems">0</h3>
-                <p>Selected</p>
-            </div>
-        </div>
-    </section>
+    </div>
 
-     <section class="bulk-actions">
-        <button id="toggleSelectBtn" class="btn secondary-btn"> Select All </button>
-        <div class="action-buttons">
-            <button id="moveSelectedBtn" class="btn primary-btn"><i class="fa-solid fa-cart-shopping"></i> Move Selected To Cart</button>
-            <button id="removeSelectedBtn" class="btn danger-btn"><i class="fa-solid fa-trash"></i>Remove Selected </button>
-        </div>
-    </section>
+    <div class="bulk-actions">
+        <label class="select-all-box">
+            <input type="checkbox" id="selectAllToggle" > <span> Select All</span>
+         </label>
+        <button id="moveSelectedBtn"><i class="fa-solid fa-cart-shopping "></i> </button>
+        <button id="deleteSelectedBtn"><i class="fa-solid fa-trash"></i></button>
+    </div>
 
-    <section class="share-section">
-        <h2>Share Wishlist</h2>
-        <div class="share-buttons">
-            <button id="copyLinkBtn" class="btn primary-btn" ><i class="fa-solid fa-link"></i> Copy Link </button>
-            <button id="whatsappBtn" class="btn whatsapp-btn"><i class="fa-brands fa-whatsapp"></i> WhatsApp Share </button>
-        </div>
-    </section>
+    <div id="wishlistGrid" class="wishlist-grid"></div>
 
-    <section id="wishlistGrid" class="wishlist-grid">
-    </section>
-
-    <section id="emptyState" class="empty-state">
-        <div class="empty-card">
-            <div class="empty-icon"> ♡</div>
-            <h2>Your Wishlist Is Empty</h2>
-            <p>Start saving products you love.</p>
-            <a href="./../pages/product.html"class="empty-btn">Continue Shopping </a>
-        </div>
-    </section>
-
-<template id="productTemplate">
-    <article class="wishlist-card">
-        <div class="card-header">
-            <label class="check-wrapper">
-                <input type="checkbox" class="product-checkbox">
-            </label>
-            <button class="remove-btn"><i class="fa-solid fa-xmark"></i></button>
-        </div>
-        <div class="image-wrapper">
-            <img src=""alt="" class="product-image">
-        </div>
-        <div class="card-body">
-            <h3 class="product-name"> Product </h3>
-            <p class="product-category"> Category </p>
-            <div class="price-row">
-                <span class="product-price">₹0</span>
-                <span class="old-price"> </span>
-            </div>
-            <div class="quantity-row">
-                <button class="qty-minus">-</button>
-                <span class="qty-value">1
-                </span>
-                <button class="qty-plus">+</button>
-            </div>
-            <div class="card-actions">
-                <button class="add-cart-btn">Add To Cart</button>
-            </div>
-        </div>
-    </article>
-</template>
-<div id="toastContainer" class="toast-container"></div>
+    <div id="emptyState" class="empty-state">
+        <div class="empty-icon"> ❤️</div>
+        <h2> Your Wishlist Is Empty </h2>
+        <p> Products added from your store will appear here.</p>
+        <a href="./../pages/product.html"class="shop-btn">Continue Shopping</a>
+    </div>
+    <div class="empty-slider">
+    <div class="slider-track">
+        <img src="./../images/wishlist1.jpg">
+       <img src="./../images/wishlist2.jpg">
+       <img src="./../images/wishlist3.jpg">
+       <img src="./../images/wishlist4.jpg">
+       <img src="./../images/wishlist5.jpg">
+       <img src="./../images/wishlist6.jpg">
+       <img src="./../images/wishlist7.jpg">
+       <img src="./../images/wishlist8.jpg">
+       <img src="./../images/wishlist9.jpg">
+       <img src="./../images/wishlist10.jpg">
+       <img src="./../images/wishlist11.jpg">
+       <img src="./../images/wishlist12.jpg">
+       <img src="./../images/wishlist13.jpg">
+       <img src="./../images/wishlist14.jpg">
+       <img src="./../images/wishlist15.jpg">
+       <img src="./../images/wishlist16.jpg">
+       <img src="./../images/wishlist17.jpg">
+       <img src="./../images/wishlist18.jpg">
+       <img src="./../images/wishlist19.jpg">
+       <img src="./../images/wishlist20.jpg">
+       <img src="./../images/wishlist21.jpg">
+       <img src="./../images/wishlist22.jpg">
+       <img src="./../images/wishlist23.jpg">
+    </div>
+</div>
+</div>
+<div id="toast"></div>
 <script src="./../js/wishlist.js"></script>
 </body>
 </html>
