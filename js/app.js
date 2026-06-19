@@ -88,3 +88,17 @@ function subscribeNewsletter() {
 
     document.getElementById("email").value = "";
 }
+
+// frequently asked questions
+function toggleFaq(button){
+
+    const answer = button.nextElementSibling;
+
+    if(answer.style.maxHeight){
+        answer.style.maxHeight = null;
+    }
+    else{
+        answer.style.maxHeight = answer.scrollHeight + "px";
+    }
+
+}
