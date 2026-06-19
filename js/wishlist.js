@@ -1,236 +1,202 @@
-const WISHLIST_KEY = "wishlist";
-const CART_KEY = "cart";
 const wishlistGrid = document.getElementById("wishlistGrid");
 const emptyState = document.getElementById("emptyState");
-const searchInput = document.getElementById("searchInput");
-const sortSelect = document.getElementById("sortSelect");
-const totalItems = document.getElementById("totalItems");
-const estimatedTotal = document.getElementById("estimatedTotal");
-const totalSavings = document.getElementById("totalSavings");
-const selectedItems = document.getElementById("selectedItems");
-const toggleSelectBtn = document.getElementById("toggleSelectBtn");
-const moveSelectedBtn = document.getElementById("moveSelectedBtn");
-const removeSelectedBtn = document.getElementById("removeSelectedBtn");
-const copyLinkBtn = document.getElementById("copyLinkBtn");
-const whatsappBtn = document.getElementById("whatsappBtn");
-const productTemplate = document.getElementById("productTemplate");
-let allSelected = false;
 
-function getWishlist() {
-    return JSON.parse(localStorage.getItem(WISHLIST_KEY)) || [];
-}
-
-function saveWishlist(products) {
-    localStorage.setItem( WISHLIST_KEY, JSON.stringify(products) );
-}
-
-function getCart() {
-    return JSON.parse(localStorage.getItem(CART_KEY)) || [];
-}
-
-function saveCart(cart) {
-    localStorage.setItem( CART_KEY, JSON.stringify(cart) );
-}
-
-function showToast(message) {
-    const container = document.getElementById("toastContainer");
-    const toast =  document.createElement("div");
-    toast.className = "toast";
+let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+function showToast(message){
+    const toast = document.getElementById("toast");
     toast.textContent = message;
-    container.appendChild(toast);
-    setTimeout(() => {
-         toast.remove();
-    }, 3000);
+    toast.classList.add("show");
+    setTimeout(()=>{ toast.classList.remove("show");
+    },2500);
 }
 
-function updateSummary() {
-    const wishlist = getWishlist();
-    let total = 0;
-    let savings = 0;
-    wishlist.forEach(product => {
-        total += (product.price || 0) * (product.quantity || 1);
-        if(product.oldPrice){
-            savings += (product.oldPrice - product.price) *  (product.quantity || 1);
-        }
-    });
-
-    totalItems.textContent = wishlist.length;
-    estimatedTotal.textContent ="₹" + total.toLocaleString();
-    totalSavings.textContent = "₹" + savings.toLocaleString();
-    selectedItems.textContent = document.querySelectorAll( ".product-checkbox:checked" ).length;
+function saveWishlist(){
+    localStorage.setItem( "wishlist", JSON.stringify(wishlist) );
 }
 
-function removeProduct(id) {
-    let wishlist = getWishlist();
-    wishlist = wishlist.filter( product => product.id !== id );
-    saveWishlist(wishlist);
-    renderWishlist();
-    showToast("Item removed");
+function updateSummary(){
+    document.getElementById("totalItems")
+    .textContent = wishlist.length;
+    const selected = wishlist.filter(item => item.selected);
+    document.getElementById("selectedItems")
+    .textContent = selected.length;
+    const totalValue = wishlist.reduce( (sum,item)=>sum + Number(item.price || 0), 0 );
+    document.getElementById("totalValue")
+    .textContent = "₹" + totalValue;
 }
 
-function addToCart(product) {
-    const cart = getCart();
-    const existing = cart.find(item => item.id === product.id );
-    if(existing){
-        existing.quantity +=  product.quantity || 1;
-    }
-    else{
-        cart.push({
-            ...product
-        });
-    }
-    saveCart(cart);
-    showToast("Added to cart");
-}
-
-function getFilteredProducts() {
-    let products =  [...getWishlist()];
-    const search = searchInput.value
-        .trim()
-        .toLowerCase();
-    if(search){
-        products = products.filter(
-            product =>  product.name  .toLowerCase()  .includes(search) );
-    }
-
-    switch(sortSelect.value){
-        case "nameAsc":
-            products.sort((a,b)=>   a.name.localeCompare(b.name));
-            break;
-        case "nameDesc":
-            products.sort((a,b)=> b.name.localeCompare(a.name));
-            break;
-        case "priceLow":
-            products.sort((a,b)=>  a.price - b.price);
-            break;
-        case "priceHigh": 
-        products.sort((a,b)=> b.price - a.price); 
-         break;
-        case "oldest":  
-        products.sort((a,b)=> a.addedAt - b.addedAt);
-            break;
-        default:  
-        products.sort((a,b)=>   b.addedAt - a.addedAt);
-    }
-    return products;
-}
-
-function renderWishlist() {
-    const products = getFilteredProducts();
+function renderWishlist(products = wishlist){
     wishlistGrid.innerHTML = "";
-    if(products.length === 0){
-        wishlistGrid.style.display ="none";
+    updateSummary();
+    if(wishlist.length === 0){
+        wishlistGrid.style.display = "none";
         emptyState.style.display = "block";
-        updateSummary();
         return;
     }
-
     wishlistGrid.style.display = "grid";
-    emptyState.style.display ="none";
-    products.forEach(product => {
-        const clone = productTemplate.content .cloneNode(true);
-        const image =clone.querySelector( ".product-image" );
-        const name =clone.querySelector(".product-name" );
-        const category = clone.querySelector( ".product-category");
-        const price = clone.querySelector(".product-price" );
-        const oldPrice = clone.querySelector(".old-price" );
-        const qtyValue = clone.querySelector(".qty-value");
-        image.src = product.image || "https://via.placeholder.com/300";
-        name.textContent = product.name;
-        category.textContent = product.category || "";
-        price.textContent = "₹" + product.price;
-        oldPrice.textContent = product.oldPrice ? "₹" + product.oldPrice : "";
-        qtyValue.textContent = product.quantity || 1;
-        clone.querySelector(".qty-minus").addEventListener( "click", () => {
-                if( product.quantity > 1){
-                    product.quantity--;
-                    const wishlist = getWishlist();
-                    const index = wishlist.findIndex( item => item.id === product.id );
-                    wishlist[index] = product;
-                    saveWishlist( wishlist );
-                    renderWishlist();
-                }
-            } );
+    emptyState.style.display = "none";
+    products.forEach((item,index)=>{
+        const actualIndex = wishlist.findIndex( p =>  p.name === item.name && p.price === item.price );
+        const card =
+        document.createElement("div");
+        card.className = "product-card";
+        card.innerHTML = `
+        <div class="image-wrapper">
+            <input type="checkbox"class="select-product"${item.selected ? "checked" : ""} onchange="toggleSelect(${actualIndex})">
+            <button class="share-product" onclick="shareProduct(${actualIndex})" title="Share Product" > <i class="fa-solid fa-share-nodes"></i> </button>
+            <img src="${item.image}" alt="${item.name}" class="product-image" >
+        </div>
 
-            clone.querySelector( ".qty-plus").addEventListener("click", () => {
-                product.quantity =(product.quantity || 1) + 1;
-                const wishlist = getWishlist();
-                const index = wishlist.findIndex( item => item.id === product.id );
-                wishlist[index] = product;
-                saveWishlist( wishlist );
-                renderWishlist();
-            } );
+        <div class="card-content">
+            <h3>${item.name}</h3>
+            <div class="price">
+                ₹${item.price} </div>
+            <div class="card-actions">
+                <buttonclass="cart-btn" onclick="moveToCart(${actualIndex})">  Add To Cart</button>
+                <button class="delete-btn" onclick="deleteItem(${actualIndex})"> Delete
+                </button>
+            </div>
+        </div>  `;
 
-        clone.querySelector( ".product-checkbox").dataset.id = product.id;
-        clone.querySelector(".product-checkbox").addEventListener("change", updateSummary );
-        clone.querySelector(".remove-btn" ).addEventListener(  "click", () => removeProduct( product.id ) );
-        clone.querySelector(".add-cart-btn").addEventListener( "click", () => addToCart( product) );
-        wishlistGrid.appendChild( clone );
+        wishlistGrid.appendChild(card);
     });
-    updateSummary();
 }
-toggleSelectBtn.addEventListener( "click", () => {
-        const checkboxes =
-            document.querySelectorAll( ".product-checkbox" );
-        allSelected = !allSelected;
-        checkboxes.forEach( checkbox => {
-                checkbox.checked = allSelected;
-            } );
-        toggleSelectBtn.textContent = allSelected  ? "Deselect All" : "Select All";
-        updateSummary();
-    } );
 
-function getSelectedIds() {
-    return [ ...document.querySelectorAll(".product-checkbox:checked")]
-    .map( item => Number(item.dataset.id) );
+function toggleSelect(index){
+    wishlist[index].selected = !wishlist[index].selected;
+    saveWishlist();
+    renderWishlist();
 }
-removeSelectedBtn.addEventListener("click",() => {
-        const selected = getSelectedIds();
-        if(!selected.length){
-            showToast("Select items first");
-            return;
-        }
-        const wishlist = getWishlist().filter( product => !selected.includes( product.id ) );
-        saveWishlist(wishlist);
-        renderWishlist();
-        showToast("Selected items removed" );
-    } );
 
-    moveSelectedBtn.addEventListener( "click",() => {
-        const selected = getSelectedIds();
-        if(!selected.length){
-            showToast("Select items first");
-            return;
-        }
-        const wishlist = getWishlist();
-        selected.forEach(id => {
-            const product = wishlist.find(item => item.id === id );
-            if(product){
-                addToCart(product);
-            }
+function deleteItem(index){
+    wishlist.splice(index,1);
+    saveWishlist();
+    renderWishlist();
+    showToast("Product Removed");
+}
+
+function moveToCart(index){
+    let cart =JSON.parse(localStorage.getItem("cart"))
+    || [];
+    cart.push(wishlist[index]);
+    localStorage.setItem( "cart", JSON.stringify(cart));
+    wishlist.splice(index,1);
+    saveWishlist();
+    renderWishlist();
+    showToast("Moved To Cart");
+}
+
+function shareProduct(index){
+    const item = wishlist[index];
+    const shareText =
+    `${item.name} - ₹${item.price}`;
+    if(navigator.share){
+        navigator.share({
+            title:item.name, text:shareText, url:window.location.href
         });
+    }else{
+        navigator.clipboard.writeText( shareText );
+        showToast("Product Details Copied" );
+    }
+}
 
-        const remaining = wishlist.filter( product => !selected.includes(product.id ) );
-        saveWishlist(remaining );
-        renderWishlist();
-        showToast("Moved to cart" );
-    } );
+document
+.getElementById("selectAllToggle")
+.addEventListener("change",function(){
+    wishlist.forEach(item=>{
+        item.selected = this.checked;
+    });
+    saveWishlist();
+    renderWishlist();
+});
 
-searchInput.addEventListener("input", renderWishlist);
-sortSelect.addEventListener("change", renderWishlist );
-copyLinkBtn.addEventListener("click", async () => {
-        try{
-            await navigator.clipboard
-            .writeText(window.location.href);
-            showToast("Link copied" );
-        }
-        catch{ 
-            showToast("Copy failed" );
-        }
-    } );
+document
+.getElementById("moveSelectedBtn")
+.addEventListener("click",()=>{
+    const selectedItems =wishlist.filter( item => item.selected );
+    if(selectedItems.length === 0){
+        showToast("Select Products First");
+        return;
+    }
+    let cart =
+    JSON.parse(localStorage.getItem("cart"))
+    || [];
+    cart.push(...selectedItems);
+    localStorage.setItem( "cart", JSON.stringify(cart));
+    wishlist = wishlist.filter( item => !item.selected);
+    saveWishlist();
+    renderWishlist();
+    showToast("Selected Products Moved");
+});
 
-whatsappBtn.addEventListener( "click",() => {
-        const text = encodeURIComponent( window.location.href );
-        window.open( `https://wa.me/?text=${text}`, "_blank");
-    } );
+document
+.getElementById("deleteSelectedBtn")
+.addEventListener("click",()=>{
+    const count = wishlist.filter(item => item.selected).length;
+    if(count === 0){
+        showToast("Select Products First" );
+        return;
+    }
+    wishlist =  wishlist.filter( item => !item.selected);
+    saveWishlist();
+    renderWishlist();
+    showToast("Selected Products Deleted" );
+
+});
+
+document
+.getElementById("searchInput")
+.addEventListener("input",function(){
+    const value =
+    this.value.toLowerCase();
+    const filtered =  wishlist.filter(item =>  item.name
+        .toLowerCase()
+        .includes(value) );
+    renderWishlist(filtered);
+});
+
+document
+.getElementById("sortSelect")
+.addEventListener("change",function(){
+    const value = this.value;
+    let sorted =
+    [...wishlist];
+    switch(value){
+        case "name-asc":
+            sorted.sort((a,b)=>  a.name.localeCompare(b.name) );
+        break;
+        case "name-desc":
+            sorted.sort((a,b)=>  b.name.localeCompare(a.name) );
+        break;
+        case "price-low":
+            sorted.sort((a,b)=> a.price - b.price);
+        break;
+        case "price-high":
+            sorted.sort((a,b)=>  b.price - a.price );
+        break;
+    }
+    renderWishlist(sorted);
+});
+
+document
+.getElementById("shareWishlistBtn")
+.addEventListener("click",()=>{
+    if(navigator.share){
+        navigator.share({
+            title:"My Wishlist", text:"Check out my wishlist", url:window.location.href
+        });
+    }else{
+        showToast("Sharing Not Supported" );
+    }
+});
+
+document
+.getElementById("copyLinkBtn")
+.addEventListener("click",()=>{
+    navigator.clipboard
+    .writeText( window.location.href )
+    .then(()=>{
+        showToast("Link Copied" );
+    });
+});
 renderWishlist();
