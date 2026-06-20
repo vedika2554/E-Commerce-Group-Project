@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link rel="stylesheet" href="./../css/header.css">
+    <link rel="stylesheet" href="./../css/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="./../css/product.css">
+</head>
+<body>
+     <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="./../images/logo.png" alt="Logo" class="logo-img" />
+                <a href="./../index.html">MegaStore</a>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="./../index.html">Home</a></li>
+                <li><a href="./product.html">Products</a></li>
+                <li><a href="./wishlist.html">Wishlist</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./cart.html">Cart</a></li>
+                <li><a href="./login.html">Login</a></li>
+            </ul>
+
+            <div class="menu-btn" onclick="toggleMenu()">
+                <img src="./../images/menu.png" alt="menu" />
+            </div>
+    </header>
+    
+<div class="product-header">
+
+    <div class="categories">
+  <button onclick="showProducts('electronics')">
+    <i class="fa-solid fa-laptop"></i>
+    Electronics
+</button>
+
+<button onclick="showProducts('fashion')">
+    <i class="fa-solid fa-shirt"></i>
+    Fashion
+</button>
+
+<button onclick="showProducts('books')">
+    <i class="fa-solid fa-book"></i>
+    Books
+</button>
+
+<button onclick="showProducts('furniture')">
+    <i class="fa-solid fa-couch"></i>
+    Furniture
+</button>
+
+<button onclick="showProducts('beauty')">
+    <i class="fa-solid fa-wand-magic-sparkles"></i>
+    Beauty
+</button>
+
+<button onclick="showProducts('toys')">
+    <i class="fa-solid fa-puzzle-piece"></i>
+    Toys & Games
+</button>
+
+    </div>
+
+   <div class="search-box">
+
+<i class="fa-solid fa-magnifying-glass"></i>
+    <input
+        type="text"
+        id="search"
+        placeholder="Search Product">
+
+</div>
+
+</div>
+
+<div id="productsContainer">
+
+</div>
+
+<script src="./../js/product-data.js"></script>
+<script src="./../js/product.js"></script>
+</body>
+</html>
