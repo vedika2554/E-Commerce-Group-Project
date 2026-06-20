@@ -290,43 +290,26 @@ function addToWishlist(){
     "wishlist.html";
 
 }
-
-/* Rating */
-
+let selectedRating = 0;
 function rateProduct(rating){
 
+    selectedRating = rating;
+
     const stars =
-    document.querySelectorAll(
-    ".star"
-    );
+    document.querySelectorAll(".star");
 
-    stars.forEach(
-
-    (star,index)=>{
+    stars.forEach((star,index)=>{
 
         if(index < rating){
 
-            star.classList.remove(
-            "fa-regular"
-            );
-
-            star.classList.add(
-            "fa-solid",
-            "active"
-            );
+            star.classList.remove("fa-regular");
+            star.classList.add("fa-solid","active");
 
         }
-
         else{
 
-            star.classList.remove(
-            "fa-solid",
-            "active"
-            );
-
-            star.classList.add(
-            "fa-regular"
-            );
+            star.classList.remove("fa-solid","active");
+            star.classList.add("fa-regular");
 
         }
 
@@ -335,38 +318,101 @@ function rateProduct(rating){
     document.getElementById(
     "ratingText"
     ).innerText =
-    "You Rated " +
-    rating +
-    " ⭐";
+    "You Rated " + rating + " ⭐";
 
-}
+}function submitReview(){
 
-/* Review */
+    let currentUser =
+    JSON.parse(
+    localStorage.getItem("currentUser")
+    );
 
-function submitReview(){
+    if(!currentUser){
 
-    let review =
-
-    document.getElementById(
-    "reviewText"
-    ).value.trim();
-
-    if(review === ""){
-
-        alert(
-        "Please Write A Review"
-        );
-
+        alert("Please Login First");
         return;
 
     }
 
-    alert(
-    "Review Submitted Successfully"
+    const reviewText =
+    document.getElementById("reviewText").value;
+
+    if(reviewText.trim() === ""){
+
+        alert("Write a review first");
+        return;
+
+    }
+
+    let review = {
+
+        name: currentUser.name,
+        rating: selectedRating,
+        text: reviewText,
+        date: new Date().toLocaleDateString()
+
+    };
+
+    let reviewKey =
+    "reviews_" + product.id;
+
+    let reviews =
+    JSON.parse(
+    localStorage.getItem(reviewKey)
+    ) || [];
+
+    reviews.push(review);
+
+    localStorage.setItem(
+        reviewKey,
+        JSON.stringify(reviews)
     );
 
     document.getElementById(
     "reviewText"
     ).value = "";
 
+    displayReviews();
+
+}function displayReviews(){
+
+    let reviewKey =
+    "reviews_" + product.id;
+
+    let reviews =
+    JSON.parse(
+    localStorage.getItem(reviewKey)
+    ) || [];
+
+    const container =
+    document.getElementById(
+    "reviewsContainer"
+    );
+
+    container.innerHTML = "";
+
+    reviews.forEach(review => {
+
+        container.innerHTML += `
+
+        <div class="review-card">
+
+            <h4>${review.name}</h4>
+
+            <div class="review-stars">
+                ${"⭐".repeat(review.rating)}
+            </div>
+
+            <p>${review.text}</p>
+
+            <small>${review.date}</small>
+
+        </div>
+
+        `;
+
+    });
+
 }
+
+displayReviews();

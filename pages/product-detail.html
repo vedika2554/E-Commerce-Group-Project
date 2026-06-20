@@ -38,10 +38,12 @@
 
         <img id="mainImage">
 
-        <div id="thumbnails"></div>
 
         <div id="thumbnails"></div>
 
+        <h3 class="feature-title">
+    Why Shop With Us?
+</h3>
 <div class="product-features">
 
     <div class="feature-item">
@@ -60,7 +62,6 @@
     </div>
 
 </div>
-
     </div>
     
 
@@ -126,7 +127,7 @@
 
     <div class="purchase-section">
 
-        <h3>Purchase Options</h3>
+        <h3>Select Quantity</h3>
 
         <div class="quantity">
 
@@ -137,6 +138,7 @@
             <button onclick="increaseQty()">+</button>
 
         </div>
+         <h3 class="purchase-option">Purchase Option</h3>
 
         <div class="btn-group">
 
@@ -200,11 +202,15 @@ onclick="addToWishlist()">
 
         <h3>Write Review</h3>
 
-        <textarea
-        id="reviewText"
-        placeholder="Share your experience...">
-        </textarea>
+       <div class="textarea-box">
 
+    <i class="fa-regular fa-pen-to-square"></i>
+
+    <textarea
+    id="reviewText"
+    placeholder="Share your experience..."></textarea>
+
+</div>
         <button
         class="review-btn"
         onclick="submitReview()">
@@ -214,6 +220,7 @@ onclick="addToWishlist()">
         </button>
 
     </div>
+    <div id="reviewsContainer"></div>
 
 </div>
 </div>

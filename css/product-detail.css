@@ -44,44 +44,41 @@
     border-color:#2563eb;
     transform:translateY(-5px);
 }
-
-/* Product Details */
-/* Features Below Thumbnails */
 .product-features{
-    margin-top:20px;
-    padding-top:15px;
     display:flex;
     justify-content:center;
-    align-items:center;
-    gap:25px;
-    flex-wrap:wrap;
+    gap:70px;
+    margin-top:20px;
 }
 
 .feature-item{
     display:flex;
+    flex-direction:column;
     align-items:center;
-    gap:20px;
-    padding:12px 15px;
-    border-radius:30px;
-    background:#f8fafc;
-    border:1px solid #e2e8f0;
-    font-size:17px;
-    font-weight:600;
-    color:#334155;
+    text-align:center;
+    gap:18px;
 }
-
-.feature-item i{
-    color:#2563eb;
+.feature-title{
+    text-align:center;
     font-size:18px;
+    font-weight:600;
+    color:#1e293b;
+    margin-top:15px;
+    margin-bottom:15px;
+}
+.feature-item i{
+    font-size:44px;
+    margin-top: 20px;
+    color:#2563eb;
 }
 
-.feature-item:hover{
-    border-color:#2563eb;
-    transform:translateY(-2px);
-    transition:0.3s;
+.feature-item span{
+    font-size:14px;
+    font-weight:600;
+    color:#475569;
 }
 .details h1{
-    font-size:1.5rem;
+    font-size:1.2rem;
     line-height:1.5;
     color:#0f172a;
     margin-bottom:20px;
@@ -158,24 +155,63 @@
 .highlights h3,
 .purchase-section h3{
     font-size:20px;
-    margin-bottom:15px;
+    margin-bottom:25px;
     color:#0f172a;
 }
+.highlights h3{
+    display:inline-block;
+    font-size:22px;
+    font-weight:700;
+    color:#0f172a;
+    position:relative;
+    padding-bottom:8px;
+}
 
+.highlights h3::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:100px;
+    height:3px;
+    background:#2563eb;
+    border-radius:10px;
+}
 .highlights ul{
-    list-style:none;
-    padding:0;
+    list-style:disc;
+    padding-left: 15px;
 }
 
 .highlights li{
     margin-bottom:12px;
-    padding-left:12px;
-   
+    font-weight: bolder;
     color:#475569;
     font-size:15px;
     line-height:1.5;
+}.highlights li:hover{
+    color:#2563eb;
+    cursor:default;
+}
+#reviewsContainer{
+    margin-top:30px;
 }
 
+.review-card{
+    background:#f8fafc;
+    border-radius:12px;
+    padding:15px;
+    margin-bottom:15px;
+}
+
+.review-card h4{
+    color:#0f172a;
+    margin-bottom:8px;
+}
+
+.review-card p{
+    color:#475569;
+    line-height:1.6;
+}
 /* =========================
    QUANTITY
 ========================= */
@@ -185,6 +221,7 @@
     align-items:center;
     gap:15px;
     margin-bottom:20px;
+    margin-left: 10px;
 }
 
 .quantity button{
@@ -246,7 +283,9 @@
     background:#2563eb;
     color:white;
 }
-
+.purchase-option{
+    margin-top: 50px;
+}
 /* =========================
    REVIEW SECTION
 ========================= */
@@ -258,7 +297,6 @@
     grid-template-columns:1fr 1fr;
     gap:25px;
     padding-top:20px;
-    border-top:1px solid #e5e7eb;
 }
 
 .rating-section h3,
@@ -280,8 +318,10 @@
     font-size:28px;
     color:#d1d5db;
     cursor:pointer;
+    margin-top: 20px;
     margin-right:5px;
     transition:0.3s;
+    margin-bottom: 20px;
 }
 
 .star:hover,
@@ -307,22 +347,35 @@
 /* =========================
    TEXTAREA
 ========================= */
-
-.review-section textarea{
+.textarea-box{
+    position:relative;
     width:100%;
-    height:90px;
-    padding:12px;
+}
+
+.textarea-box i{
+    position:absolute;
+    top:17px;
+    left:15px;
+    font-weight: bolder;
+    color:#94a3b8;
+    font-size:16px;
+}
+
+.textarea-box textarea{
+    width:100%;
+    height:100px;
+    padding:15px 15px 15px 45px;
+    font-weight: bolder;
     border:1px solid #dbe2ea;
-    border-radius:8px;
+    border-radius:10px;
     resize:none;
-    outline:none;
-    font-size:14px;
 }
-
-.review-section textarea:focus{
-    border-color:#2563eb;
+#reviewText::placeholder
+{
+    font-weight: bolder;
+    color:#94a3b8;
+    font-size:15px
 }
-
 /* =========================
    REVIEW BUTTON
 ========================= */
