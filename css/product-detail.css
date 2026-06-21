@@ -2,16 +2,12 @@
 
 .container{
     width:90%;
-    margin:40px auto;
+    margin-top: 110px ;
+  margin-left:40px ;
     display:grid;
     grid-template-columns:45% 55%;
     gap:50px;
 }
-
-/* Image Section */
-
-
-
 #mainImage{
     width:100%;
     object-fit:contain;
@@ -44,6 +40,7 @@
     border-color:#2563eb;
     transform:translateY(-5px);
 }
+
 .product-features{
     display:flex;
     justify-content:center;
@@ -63,8 +60,7 @@
     font-size:18px;
     font-weight:600;
     color:#1e293b;
-    margin-top:15px;
-    margin-bottom:15px;
+    margin-top:45px;
 }
 .feature-item i{
     font-size:44px;
@@ -78,6 +74,7 @@
     color:#475569;
 }
 .details h1{
+    margin-top: 20px;
     font-size:1.2rem;
     line-height:1.5;
     color:#0f172a;
@@ -140,10 +137,6 @@
     margin-bottom:30px;
 }
 
-/* Highlights + Purchase */
-/* =========================
-   HIGHLIGHTS + PURCHASE
-========================= */
 
 .info-row{
     display:grid;

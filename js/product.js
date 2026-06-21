@@ -154,5 +154,18 @@ function addToCart(id){
 
 }
 
+const category =
+localStorage.getItem(
+"selectedCategory"
+);
 
-showProducts("electronics");
+if(category){
+
+    showProducts(category);
+
+}else{
+
+    showProducts("electronics");
+
+}
+

@@ -15,7 +15,8 @@ if(!product){
     );
 
     window.location.href =
-    "product.html";
+    "products.html";
+    
 
 }
 
@@ -416,3 +417,22 @@ function rateProduct(rating){
 }
 
 displayReviews();
+/* Auto Thumbnail Slider */
+let currentIndex = 0;
+
+setInterval(() => {
+
+    currentIndex++;
+
+    if(currentIndex >= product.images.length){
+
+        currentIndex = 0;
+
+    }
+
+    document.getElementById(
+    "mainImage"
+    ).src =
+    product.images[currentIndex];
+
+}, 2000);
