@@ -8,8 +8,6 @@ products.find(
 p => p.id == productId
 );
 
-console.log("Selected Product ID:", productId);
-console.log("Products:", products);
 if(!product){
 
     alert(
@@ -18,9 +16,6 @@ if(!product){
 
     window.location.href =
     "products.html";
-    return;
-
-}
 
 /* Product Details */
 
@@ -419,3 +414,22 @@ function rateProduct(rating){
 }
 
 displayReviews();
+/* Auto Thumbnail Slider */
+let currentIndex = 0;
+
+setInterval(() => {
+
+    currentIndex++;
+
+    if(currentIndex >= product.images.length){
+
+        currentIndex = 0;
+
+    }
+
+    document.getElementById(
+    "mainImage"
+    ).src =
+    product.images[currentIndex];
+
+}, 2000);
