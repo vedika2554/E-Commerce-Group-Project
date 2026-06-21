@@ -92,11 +92,11 @@ body{
     display:flex;
     flex-wrap:wrap;
     gap:20px;
-    justify-content:space-evenly;
+    justify-content:center;
 }
 
 .card{
-    width:330px;
+    width:300px;
     background:white;
     border-radius:18px;
     overflow:hidden;

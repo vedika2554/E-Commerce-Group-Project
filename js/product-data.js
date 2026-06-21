@@ -447,23 +447,331 @@ const products = [
         id: 22,
         name: "EFERMONE® Polarized Sunglasses for Men and Women 100% UV Protection Outdoor Travelling Sports Bikes Cars Driving and Hiking (Square | Medium)",
         description: "These stylish square-frame sunglasses feature premium polarized lenses and 100% UV protection for superior eye safety and visual clarity. Built with a durable frame and versatile design, they are perfect for driving, travelling, biking, hiking, and everyday outdoor use.",
-        originalPrice: 2999,
-        price: 499,
+        originalPrice: 1399,
+        price: 459,
         category: "fashion",
         images: [
             "https://m.media-amazon.com/images/I/A1XAaTuCcuL._SX679_.jpg",
-            "https://m.media-amazon.com/images/I/71H1nV1NVTL._SX569_.jpg",
-            "https://m.media-amazon.com/images/I/71aDgIeWvRL._SX679_.jpg",
-            "https://m.media-amazon.com/images/I/81jnPLxc8BL._SX569_.jpg",
+            "https://m.media-amazon.com/images/I/81SX8zsXZFL._SY741_.jpg",
+            "https://m.media-amazon.com/images/I/81R8h2Cje4L._SY741_.jpg",
+            "https://m.media-amazon.com/images/I/81VvESFsUAL._SY741_.jpg",
         ],
    highlights: [
-    "100% UV Protection",
-    "Premium Polarized Lenses",
-    "Classic Square Frame Design",
-    "Durable & Lightweight Build",
-    "Ideal for Outdoor Activities"
+    "Premium Cotton Blend Fabric",
+    "Slim Tapered Fit",
+    "Classic Retro Style",
+    "Comfortable All-Day Wear",
+    "Durable Zipper Closure"
 ]
     },
+    {
+        id: 23,
+        name: "Carlton London Women's Textured Knit Comfort Ballet Flats",
+        description: "These comfortable Bellies are designed for everyday relaxation, featuring a breathable construction that keeps your feet cool and dry. With a timeless design and soft feel, they are perfect for lounging at home, running errands, or enjoying all-day comfort.",
+        originalPrice: 2199,
+        price: 989,
+        category: "fashion",
+        images: [
+            "https://m.media-amazon.com/images/I/718-9bCl3lL._SY695_.jpg",
+            "https://m.media-amazon.com/images/I/61VFPlXeACL._SY695_.jpg",
+            "https://m.media-amazon.com/images/I/91PuFmXlA9L._SY695_.jpg",
+            "https://m.media-amazon.com/images/I/81T9Bh1Q40L._SY695_.jpg",
+        ],
+  highlights: [
+    "Breathable & Comfortable Design",
+    "Soft All-Day Comfort",
+    "Lightweight & Easy to Wear",
+    "Perfect for Home & Casual Use",
+    "Classic Timeless Style"
+]
+    },
+    {
+        id: 24,
+        name: "Titan Karishma Analog Black Dial Men's Watch -NM1639SM02 / NL1639SM02",
+        description: "This elegant analog watch features a refined black dial with minimalist markers and a polished silver-tone stainless steel strap for a sophisticated look. Powered by a reliable quartz movement, it offers accurate timekeeping and a comfortable fit, making it perfect for both formal and casual occasions.",
+        originalPrice: 1995,
+        price: 1906,
+        category: "fashion",
+        images: [
+            "https://m.media-amazon.com/images/I/51ykbSj-eoL._SX679_.jpg",
+            "https://m.media-amazon.com/images/I/712791mf3nL._SX679_.jpg",
+            "https://m.media-amazon.com/images/I/51iBYW8bvPL._SX679_.jpg",
+            "https://m.media-amazon.com/images/I/61jRUtfjKtL._SX679_.jpg",
+        ],
+  highlights: [
+    "Elegant Black Dial Design",
+    "Silver Stainless Steel Strap",
+    "Accurate Quartz Movement",
+    "Slim & Comfortable Case",
+    "Perfect for Formal & Casual Wear"
+]
+    },
+   
+    {
+        id: 25,
+        name: "Programming in ANSI C | 9th Edition | Balagurusamy",
+        description: "This comprehensive C Programming book is designed for beginners and advanced learners, covering fundamental concepts to modern programming techniques. Packed with practical examples, case studies, projects, debugging exercises, and interview questions, it helps build strong programming and problem-solving skills for academic and professional success.",
+        originalPrice: 785 ,
+        price: 599,
+        category: "books",
+        images: [
+            "https://m.media-amazon.com/images/I/71wFVorFuaL._SL1476_.jpg",
+            "https://m.media-amazon.com/images/I/51kaPHDDkkL.jpg",
+            "https://m.media-amazon.com/images/I/71ds-LDTF8L._SL1483_.jpg",
+            "https://m.media-amazon.com/images/I/51OIBiX1upL.jpg",
+        ],
+  highlights: [
+   "Comprehensive C Programming Guide",
+    "24 Real-World Case Studies",
+    "Programming & Debugging Exercises",
+    "Includes Industry-Oriented Projects",
+    "Interview & Critical Thinking Questions"
+]
+    },
+    
+    {
+        id: 26,
+        name: "365 Maths Activity Book: Fun Activities and Practice Sheets | Learn Counting, Addition & Subtraction | Ages 4–7 | 3 Hours of Interactive Learning",
+        description: "This engaging mathematics activity book helps young learners build strong numerical and problem-solving skills through fun and interactive exercises. With over 365 activities covering numbers, operations, measurement, and reasoning, it makes learning math enjoyable and practical for everyday life.",
+        originalPrice: 379,
+        price: 206,
+        category: "books",
+        images: [
+            "https://m.media-amazon.com/images/I/81IXLPp865L._SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/81mZFMJvLNL._SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/81t8d5dY8-L._SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/81oqnY1GYIL._SL1500_.jpg",
+        ],
+  highlights: [
+   "365+ Fun Learning Activities",
+    "Builds Mathematical Concepts",
+    "Enhances Reasoning Skills",
+    "Interactive Problem Solving",
+    "Ideal for Young Learners"
+]
+    },
+    
+    {
+        id: 27,
+        name: "Harry Potter : The Complete Collection (Set of 7 Books)",
+        description: "Experience the complete magical journey of Harry Potter with this beautifully presented box set containing all seven bestselling novels. Follow Harry and his friends through unforgettable adventures at Hogwarts, filled with magic, mystery, friendship, and courage that have captivated readers worldwide.",
+        originalPrice:4999 ,
+        price:2498 ,
+        category: "books",
+        images: [
+            "https://m.media-amazon.com/images/I/81q77Q39nEL._SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/81uRUnI9Y3L._SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/81vk-9zjgpL._SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/91-SvQ4I17L._SL1500_.jpg",
+        ],
+  highlights: [
+   "Complete 7-Book Harry Potter Collection",
+    "Magical Hogwarts Adventures",
+    "Beautiful Illustrated Box Set",
+    "Perfect Gift for Book Lovers",
+    "Worldwide Bestselling Series"
+]
+    },
+    
+    {
+        id: 28,
+        name: "Atomic Habits: Chote Badlav, Asadharan Parinaam (Hindi)",
+        description: "Atomic Habits by James Clear reveals how small, consistent changes can lead to remarkable personal and professional growth. Combining practical strategies with insights from psychology and neuroscience, this bestselling book provides a proven framework for building good habits, breaking bad ones, and achieving lasting success.",
+        originalPrice: 899,
+        price: 468,
+        category: "books",
+        images: [
+            "https://m.media-amazon.com/images/I/71joEVa6ZQL._SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/81hWOb-SxDL._SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/81g2dRe+ifL._SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/81btaZwBz+L._SL1500_.jpg",
+        ],
+  highlights: [
+      "Proven Habit-Building Framework",
+    "Practical Life-Changing Strategies",
+    "Based on Psychology & Neuroscience",
+    "Helps Break Bad Habits",
+    "Worldwide Bestselling Self-Help Book"
+]
+    },
+    
+    {
+        id: 29,
+        name: "Python Programming: A Modular Approach",
+        description: "Python Programming: A Modular Approach (2nd Edition) is a comprehensive guide designed to help learners master Python programming from fundamentals to advanced applications. Updated for Python 3.12, it presents concepts in a clear, modular style, making it ideal for building strong coding skills and solving real-world problems.",
+        originalPrice: 710,
+        price: 525,
+        category: "books",
+        images: [
+            "https://m.media-amazon.com/images/I/81OLDEdHPxL._SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/71fx7y6plJL._SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/81RiUgIkjzL._SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/81k0-kLLnHL._SL1500_.jpg",
+        ],
+highlights: [
+    "Updated for Python 3.12",
+    "Modular Learning Approach",
+    "Covers Beginner to Advanced Topics",
+    "Real-World Programming Applications",
+    "Builds Strong Coding Fundamentals"
+]
+    },
+    
+    {
+        id: 30,
+        name: "Fundamentals of Mathematical Statistics",
+        description: "Fundamentals of Mathematical Statistics by S.C. Gupta and V.K. Kapoor is a widely trusted textbook that provides a comprehensive introduction to statistical concepts, probability theory, and data analysis techniques. Designed for undergraduate and competitive exam preparation, the book explains both theoretical foundations and practical applications through numerous solved examples and exercises.",
+        originalPrice: 1999,
+        price: 895,
+        category: "books",
+        images: [
+            "https://m.media-amazon.com/images/I/61zd+YGHEEL._SL1280_.jpg",
+            "https://m.media-amazon.com/images/I/51UShgqJnrL._SL1045_.jpg",
+            "https://m.media-amazon.com/images/I/71PIc-Hs+hL._SL1280_.jpg",
+            "https://m.media-amazon.com/images/I/611Ds20LcuL._SL1230_.jpg",
+        ],
+  highlights: [
+    "Comprehensive Statistics Coverage",
+    "Probability & Statistical Theory",
+    "Numerous Solved Examples",
+    "Practice Exercises & Problems",
+    "Ideal for Students & Competitive Exams"
+]
+    },
+    
+    {
+        id: 31,
+        name: "The Alchemist by Ben Jonson | Text & Critical Evaluation | University Edition | Complete Drama with Analysis, Explanations & Q&A | Amit Chawla Inkwell Publication",
+        description: "The Alchemist by Ben Jonson is a classic satirical play that explores themes of greed, ambition, and deception through the adventures of three cunning con artists in plague-ridden London. This University Edition includes the complete text, critical analysis, important passages, and exam-oriented question answers, making it an excellent resource for literature students and competitive exam preparation.",
+        originalPrice: 200,
+        price: 135,
+        category: "books",
+        images: [
+            "https://m.media-amazon.com/images/I/51cUDVNBmvL._SY466_.jpg",
+            "https://m.media-amazon.com/images/I/61uSATm5vWL._SL1045_.jpg",
+            "https://m.media-amazon.com/images/I/51cUDVNBmvL.jpg",
+            "https://m.media-amazon.com/images/I/51y0CDFRAnL._SY466_.jpg",
+        ],
+  highlights: [
+     "Classic Satirical Drama",
+    "Critical Evaluation Included",
+    "Important Passages Explained",
+    "University Exam Question Answers",
+    "Useful for IGNOU, DU & UGC-NET"
+]
+    },
+    
+    {
+        id: 32,
+        name: "Think And Grow Rich",
+        description: "Think and Grow Rich by Napoleon Hill is one of the world's most influential personal development books, offering timeless principles for achieving success, wealth, and personal growth. Based on years of research and real-life success stories, it provides a step-by-step framework to develop the mindset, habits, and determination needed to achieve your goals.",
+        originalPrice:150 ,
+        price: 123,
+        category: "books",
+        images: [
+            "https://m.media-amazon.com/images/I/61FhJphSdSL._SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/71mOvd-c9RL._SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/7114S1dB0hL._SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/718H7xX+SsL._SL1500_.jpg",
+        ],
+  highlights: [
+   "Worldwide Bestselling Success Book",
+    "13 Proven Principles for Achievement",
+    "Develops Wealth & Success Mindset",
+    "Practical Personal Growth Strategies",
+    "Timeless Motivation & Inspiration"
+]
+    },
+    
+    {
+        id: 33,
+        name: "Programming with Java | 7th Edition | E. Balagurusamy",
+        description: "This comprehensive Java programming book is designed for beginners and advanced learners alike, covering concepts from the basics to modern Java SE 17 features. With clear explanations, practical examples, solved programs, and real-world programming exercises, it helps readers build a strong foundation in Java and object-oriented programming.",
+        originalPrice: 825,
+        price: 663,
+        category: "books",
+        images: [
+            "https://m.media-amazon.com/images/I/51xiwRkS2oL.jpg",
+            "https://m.media-amazon.com/images/I/614NkzNII9L.jpg",
+            "https://m.media-amazon.com/images/I/81xQtaAb+VL._SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/61TnFI8Z-cL.jpg",
+        ],
+  highlights: [
+    "Updated for Java SE 17",
+    "Beginner-Friendly Explanations",
+    "Real-World Programming Exercises",
+    "Solved Examples & Illustrations",
+    "Exam-Oriented Questions & Practice"
+]
+    },
+    
+    {
+        id: 34,
+        name: "Logic & Computer Design Fundamentals, 5th edition",
+        description: "Logic and Computer Design Fundamentals provides a comprehensive introduction to digital logic, digital systems, and computer design concepts. Updated to reflect modern industry standards and trends, this book helps students build a strong foundation in hardware design, logic circuits, and computer architecture through clear explanations and practical examples.",
+        originalPrice: 935,
+        price: 473 ,
+        category: "books",
+        images: [
+            "https://m.media-amazon.com/images/I/51mS7eK-aBL._SY425_.jpg",
+            "https://m.media-amazon.com/images/I/711GaenyDiL._SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/61gkPuMasQL.jpg",
+            "https://m.media-amazon.com/images/I/71Db9K7D5rL._SL1500_.jpg",
+        ],
+  highlights: [
+    "Comprehensive Digital Logic Concepts",
+    "Modern Computer Design Principles",
+    "Updated Industry-Relevant Content",
+    "Covers Logic & Digital Systems",
+    "Ideal for Computer Science Students"
+]
+    },
+    
+    {
+        id: 35,
+        name: "Rich Dad Poor Dad: What the Rich Teach Their Kids About Money That the Poor and Middle Class Do Not!",
+        description: "Rich Dad Poor Dad by Robert Kiyosaki is one of the world's most influential personal finance books, teaching valuable lessons about money, investing, and wealth creation. Through practical insights and real-life experiences, it challenges conventional beliefs about earning and managing money, helping readers develop a mindset for financial independence and long-term success.",
+        originalPrice: 499,
+        price: 265,
+        category: "books",
+        images: [
+            "https://m.media-amazon.com/images/I/71HJj3XmheL._SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/61bPouX6Z9L._SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/71pLJc2bSeL._SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/41SeCqsuWoL.jpg",
+        ],
+  highlights: [
+    "Worldwide Bestselling Finance Book",
+    "Teaches Financial Independence",
+    "Practical Money Management Lessons",
+    "Investing & Wealth-Building Insights",
+    "25th Anniversary Edition"
+]
+    },
+    
+    {
+        id: 36,
+        name: "The Power of Positive Thinking for Success: Napoleon Hill’s Proven Mindset Strategies for Wealth and Personal Growth — Self Help Book in Hindi",
+        description: "This inspiring self-help book emphasizes the power of positive thinking and a Positive Mental Attitude (P.M.A.) in achieving success and personal growth. Through practical principles and motivational guidance, it encourages readers to overcome negativity, strengthen their determination, and turn their dreams into reality.",
+        originalPrice: 300,
+        price: 183,
+        category: "books",
+        images: [
+            "https://m.media-amazon.com/images/I/71nHhWWPHjL._SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/81kjmfkHz9L._SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/71R5osr4zwL._SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/81oRVcuCZ7L._SL1500_.jpg",
+        ],
+  highlights: [
+   "Power of Positive Thinking",
+    "Develops Positive Mental Attitude",
+    "Practical Success Principles",
+    "Boosts Confidence & Motivation",
+    "Guides Personal Growth & Achievement"
+]
+    },
+    
+   
    
 ];
 
