@@ -4,13 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login & Register</title>
-
+    <title>login Page</title>
     <link rel="stylesheet" href="./../css/login.css">
     <link rel="stylesheet" href="./../css/footer.css">
     <link rel="stylesheet" href="./../css/header.css">
-
-
 </head>
 
 <body>
@@ -39,6 +36,29 @@
                 <img src="./../images/menu.png" alt="menu" />
             </div>
     </header>
+
+    <div class="container">
+
+
+        <!-- Login Form -->
+        <form class="loginbox" id="loginForm">
+            <img src="./../images/imagebc.jpeg" alt="ladyimage" class="image" />
+            <br />
+            <h2 style="color:#6474eb">Login</h2>
+
+            <input type="text" id="loginMobile" placeholder=" Enter Mobile Number" required>
+
+            <div class="password-box">
+
+                <input type="password" id="loginPassword" class="password-input" placeholder=" Enter Password" required>
+                <img src="./../images/hide.png" onclick="toggleLoginPassword()" class="eye-icon" alt="hideicon"
+                    id="loginEye">
+
+                <button type="button" class="eye-btn" onclick="toggleLoginPassword()">
+
+                    <i class="fa-solid fa-eye" id="loginEye"></i>
+
+                </button>
 
     <div class="main-container">
 
@@ -105,42 +125,34 @@
                         Register
                     </a>
                 </p>
+
             </div>
 
-            <!-- Register Form -->
-            <div class="register container">
-                <div class="register-box" id="register">
+            <button type="submit">
+                Login
+            </button>
 
-                    <h2
-                        style="padding-top: 4px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 28px; color:#64748b;">
-                        Create Your Account</h2>
+            <p>
+                Don't have an account?
+                <span onclick="showRegister()">
+                    Register
+                </span>
+            </p>
 
-                    <input type="text" id="fullName" placeholder=" Enter Your Full Name" required
-                        style="border: blue 1px solid;" />
+        </form>
 
-                    <small id="nameError"></small>
+        <!-- Register Form -->
+        <form id="registerForm">
 
-                    <input type="email" id="registerEmail" placeholder=" Enter Email Address"
-                        style="border: blue 1px solid;" required />
+            <h2 style="color:#6474eb">Register</h2>
 
-                    <small id="registerEmailError"></small>
+            <input type="text" id="name" placeholder=" Enter Full Name" required>
 
-                    <input type="tel" id="mobile" placeholder=" Enter Mobile Number" style="border:blue 1px solid;"
-                        required />
+            <input type="email" id="registerEmail" placeholder=" EnterEmail Address" required>
 
-                    <small id="mobileError"></small>
+            <input type="text" id="registerMobile" placeholder=" Enter Mobile Number" required>
 
-                    <div class="gender">
-
-                        <label>
-                            <input type="radio" name="gender" value="Male">
-                            Male
-                        </label>
-
-                        <label>
-                            <input type="radio" name="gender" value="Female">
-                            Female
-                        </label>
+            <div class="password-box">
 
                         <label>
                             <input type="radio" name="gender" value="Other">
@@ -155,8 +167,35 @@
                         <img src="../images/hide.png" id="vieww" onclick="toggleRegisterPassword()" />
                     </div>
 
-                    <div id="strengthMeter">
 
+                <input type="password" id="registerPassword" placeholder=" Enter Password" required>
+                <img src="./../images/hide.png" onclick="toggleRegisterPassword()" class="eye-icon" alt="hideicon"
+                    id="registerEye">
+
+                <button type="button" class="eye-btn" onclick="toggleRegisterPassword()">
+
+                    <i class="fa-solid fa-eye" id="registerEye"></i>
+
+                </button>
+
+            </div>
+
+            <button type="submit">
+                Register →
+            </button>
+
+            <p>
+                Already have an account?
+                <span onclick="showLogin()">
+                    Login
+                </span>
+            </p>
+
+        </form>
+
+    </div>
+
+    <script src="./../js/login.js"></script>
                         <div id="strengthBar"></div>
                     </div>
 
@@ -265,6 +304,7 @@
         </div>
     </footer>
     <script src="../js/login.js"></script>
+
 
 </body>
 
