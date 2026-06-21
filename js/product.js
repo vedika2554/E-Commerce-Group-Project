@@ -156,12 +156,16 @@ function addToCart(id){
 
 const category =
 localStorage.getItem(
-"selectedCategory"
+    "selectedCategory"
 );
 
 if(category){
 
     showProducts(category);
+
+    localStorage.removeItem(
+        "selectedCategory"
+    );
 
 }else{
 
