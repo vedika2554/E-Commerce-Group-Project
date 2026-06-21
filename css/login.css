@@ -1,229 +1,168 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
 }
 
-body {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: white;
-    padding: 20px;
+body{
+    background:#f8fafc;
 }
 
-
-.container {
-    width: 100%;
-    max-width: 400px;
+/* Main Container */
+.container{
+    max-width:1000px;
+    margin:80px auto;
+    margin-top: 140px;
+    display:flex;
+    background:#fff;
+    border-radius:25px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,0.1);
 }
 
-form {
-    background: #fff;
-    padding: 35px;
-    border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+/* Left Side Image */
+.login-image{
+    width:60%;
+    background:linear-gradient(135deg,#dbeafe,#bfdbfe);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px;
 }
 
-#registerForm {
-    display: none;
+.login-image img{
+    /* width:100%; */
+    height: 100%;
+    max-width:500px;
+    transition:0.4s;
 }
 
-h2 {
-    text-align: center;
-    margin-bottom: 25px;
-    color: #333;
+.login-image img:hover{
+    transform:scale(1.05);
 }
 
-input {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    outline: none;
-    font-size: 15px;
-
+/* Right Side Form Section */
+.form-container{
+    width:55%;
+    padding:40px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
-input:focus {
-    border-color: #4f46e5;
+/* Forms */
+#loginForm,
+#registerForm{
+    width:100%;
+    max-width:400px;
 }
 
-.password-box {
-    position: relative;
+#registerForm{
+    display:none;
 }
 
-.password-box input {
-    margin-bottom: 15px;
-    padding-right: 45px;
+#loginForm h2,
+#registerForm h2{
+    text-align:center;
+    color:#112240;
+    margin-bottom:20px;
+    font-size:30px;
 }
 
-.eye-btn {
-    position: absolute;
-    right: 12px;
-    top: 35%;
-    transform: translateY(-50%);
-    border: none;
-    background: none;
-    cursor: pointer;
-    color: #666;
-    font-size: 18px;
+/* Inputs */
+#loginForm input,
+#registerForm input{
+    width:100%;
+    padding:14px;
+    border:1px solid #dbeafe;
+    border-radius:12px;
+    margin-bottom:15px;
+    font-size:15px;
 }
 
-button[type="submit"] {
-    width: 100%;
-    padding: 12px;
-    border: none;
-    border-radius: 8px;
-    background: #2563eb;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    transition: 0.3s;
+#loginForm input:focus,
+#registerForm input:focus{
+    outline:none;
+    border-color:#2563eb;
+    box-shadow:0 0 8px rgba(37,99,235,0.2);
 }
 
-button[type="submit"]:hover {
-    background: #1d4ed8;
+/* Password */
+.password-box{
+    position:relative;
 }
 
-p {
-    text-align: center;
-    margin-top: 15px;
-    color: #555;
+.eye-btn{
+    position:absolute;
+    right:15px;
+    top:35%;
+    transform:translateY(-50%);
+    border:none;
+    background:none;
+    cursor:pointer;
 }
 
-p span {
-    color: #2563eb;
-    cursor: pointer;
-    font-weight: bold;
+/* Buttons */
+#loginForm button[type="submit"],
+#registerForm button[type="submit"]{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:12px;
+    background:linear-gradient(135deg,#2563eb,#1e40af);
+    color:white;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
 }
 
-p span:hover {
-    text-decoration: underline;
-    color: #1d4ed8;
-
+#loginForm button[type="submit"]:hover,
+#registerForm button[type="submit"]:hover{
+    transform:translateY(-2px);
+    box-shadow:0 8px 20px rgba(37,99,235,0.3);
 }
 
-.eye-icon {
-    position: absolute;
-    right: 12px;
-    top: 35%;
-    transform: translateY(-50%);
-    border: none;
-    background: none;
-    cursor: pointer;
-    color: #666;
-    font-size: 18px;
-    height: 22px;
+/* Bottom Text */
+#loginForm p,
+#registerForm p{
+    text-align:center;
+    margin-top:15px;
+    color:#64748b;
 }
 
-.image {
-    display: flex;
-    align-items: center;
-    flex-direction: block;
-    height: 200px;
-    width: 300px;
-    object-fit: cover;
-    margin-left: 12px;
-    box-shadow: 1px 1px 1px 1px rgb(181, 181, 236);
-    border-radius: 7px;
+#loginForm span,
+#registerForm span{
+    color:#2563eb;
+    cursor:pointer;
+    font-weight:600;
 }
 
-.fa-solid {
-    position: absolute;
-    right: 12px;
-    top: 35%;
-    transform: translateY(-50%);
-    border: none;
-    background: none;
-    cursor: pointer;
-    color: #666;
-    font-size: 18px;
-    height: 21px;
+#loginForm span:hover,
+#registerForm span:hover{
+    text-decoration:underline;
 }
 
-.callicon {
-    height: 32px;
-    width: 23px;
-    padding-top: 12px;
-}
+/* Mobile Responsive */
+@media(max-width:768px){
 
-@media screen and (max-width: 768px) {
-
-    .container {
-        max-width: 500px;
+    .container{
+        flex-direction:column;
+        margin:20px;
     }
 
-    form {
-        padding: 30px;
+    .login-image{
+        width:100%;
+        padding:20px;
     }
 
-    .image {
-        width: 100%;
-        height: 220px;
-        margin-left: 0;
+    .login-image img{
+        max-width:250px;
     }
 
-    h2 {
-        font-size: 28px;
-    }
-
-    input {
-        font-size: 16px;
-    }
-}
-
-
-
-@media screen and (max-width: 480px) {
-
-    body {
-        padding: 10px;
-    }
-
-    .container {
-        width: 100%;
-    }
-
-    form {
-        padding: 20px;
-    }
-
-    .image {
-        width: 100%;
-        height: 180px;
-        margin-left: 0;
-    }
-
-    h2 {
-        font-size: 24px;
-    }
-
-    input {
-        padding: 10px;
-        font-size: 14px;
-    }
-
-    button[type="submit"] {
-        padding: 10px;
-        font-size: 15px;
-    }
-
-    .eye-icon {
-        width: 20px;
-        height: 20px;
-        right: 10px;
-    }
-
-    .callicon {
-        width: 20px;
-        height: 28px;
-    }
-
-    p {
-        font-size: 14px;
+    .form-container{
+        width:100%;
+        padding:25px;
     }
 }

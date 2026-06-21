@@ -1,19 +1,17 @@
-const loginForm = document.getElementById("loginForm");
-const registerForm = document.getElementById("registerForm");
+const navAuthText = document.getElementById("navAuthText");
 
-// Hide register form initially
-registerForm.style.display = "none";
-
-// Show Register Form
 function showRegister() {
     loginForm.style.display = "none";
     registerForm.style.display = "block";
+
+    navAuthText.textContent = "Register";
 }
 
-// Show Login Form
 function showLogin() {
     registerForm.style.display = "none";
     loginForm.style.display = "block";
+
+    navAuthText.textContent = "Login";
 }
 
 // Register
@@ -69,8 +67,8 @@ loginForm.addEventListener("submit", function (e) {
 
     let user = users.find(
         u =>
-            u.mobile === mobile &&
-            u.password === password
+        u.mobile === mobile &&
+        u.password === password
     );
 
     if (user) {
@@ -91,46 +89,40 @@ loginForm.addEventListener("submit", function (e) {
 
     }
 });
-function toggleLoginPassword() {
+function toggleLoginPassword(){
 
-    const password =
-        document.getElementById("loginPassword");
+    let password =
+    document.getElementById("loginPassword");
 
-    const eye =
-        document.getElementById("loginEye");
+    let eye =
+    document.getElementById("loginEye");
 
-    if (password.type === "password") {
+    if(password.type === "password"){
         password.type = "text";
         eye.className = "fa-solid fa-eye-slash";
-        eye.src = "./../images/view.png";
     }
-    else {
+    else{
         password.type = "password";
         eye.className = "fa-solid fa-eye";
-        eye.src = "./../images/hide.png";
     }
 }
 
-function toggleRegisterPassword() {
+function toggleRegisterPassword(){
 
-    const password =
-        document.getElementById("registerPassword");
+    let password =
+    document.getElementById("registerPassword");
 
-    const eye =
-        document.getElementById("registerEye");
+    let eye =
+    document.getElementById("registerEye");
 
-    if (password.type === "password") {
+    if(password.type === "password"){
         password.type = "text";
         eye.className = "fa-solid fa-eye-slash";
-        eye.src = "./../images/view.png";
     }
-    else {
+    else{
         password.type = "password";
         eye.className = "fa-solid fa-eye";
-        eye.src = "./../images/hide.png";
     }
-}
-    alert("Registration Successful");
 }
 
 // dark light mode

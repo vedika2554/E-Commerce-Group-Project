@@ -25,7 +25,12 @@
                 <li><a href="./wishlist.html"><img src="./../images/like.png" class="nav-icon">Wishlist</a></li>
                 <li><a href="./about.html"><img src="./../images/info.png" class="nav-icon">About</a></li>
                 <li><a href="./cart.html"><img src="./../images/card.png" class="nav-icon">Cart</a></li>
-                <li><a href="./login.html"><img src="./../images/log.png" class="nav-icon">Login</a></li>
+                <li>
+                    <a href="./login.html" class="login-btn">
+                        <img src="./../images/log.png" class="nav-icon">
+                        <span id="navAuthText">Login</span>
+                    </a>
+                </li>
             </ul>
 
             <button id="themeToggle" class="theme-btn">
@@ -37,216 +42,89 @@
             </div>
     </header>
 
+
+
     <div class="container">
-
-
-        <!-- Login Form -->
-        <form class="loginbox" id="loginForm">
-            <img src="./../images/imagebc.jpeg" alt="ladyimage" class="image" />
-            <br />
-            <h2 style="color:#6474eb">Login</h2>
-
-            <input type="text" id="loginMobile" placeholder=" Enter Mobile Number" required>
-
-            <div class="password-box">
-
-                <input type="password" id="loginPassword" class="password-input" placeholder=" Enter Password" required>
-                <img src="./../images/hide.png" onclick="toggleLoginPassword()" class="eye-icon" alt="hideicon"
-                    id="loginEye">
-
-                <button type="button" class="eye-btn" onclick="toggleLoginPassword()">
-
-                    <i class="fa-solid fa-eye" id="loginEye"></i>
-
-                </button>
-
-    <div class="main-container">
-
-        <!-- Left Side -->
-        <div class="left-section">
-            <div>
-                <img src="./../images/imagebc.jpeg" alt="backgroundimage" class="bac-img" />
-                <img src="./../images/accountimage.avif" alt="accountimage" class="acc-img" />
-                <i class="left-card">
-                    <h2 style="margin-top: 30px;"> Welcome Back!!! </h2>
-
-                    <p style="margin-top: 20px; font-size: 18px; ;">
-                        Enter Your Personal Details and start your journey with us!!!
-                    </p>
-                </i>
-            </div>
+        <div class="login-image">
+            <img src="./../images/login-img.avif" alt="Login Banner">
         </div>
 
-        <!-- Right Side -->
-        <div class="right-section">
+        <div class="form-container">
 
             <!-- Login Form -->
-            <div class="login-box">
+            <form id="loginForm">
 
-                <h2 style="color:#64748b;">Login
-                    <img src="./../images/login.png" style="margin-left: 10px; margin-top: 10px;" />
-                </h2>
+                <h2>Login</h2>
 
-                <div class="input-group">
+                <input type="text" id="loginMobile" placeholder="Mobile Number" required>
 
-                    <input type="email" id="loginEmail" placeholder="Enter Email" style="border: blue 1px solid;"
-                        required />
-                    </label>
+                <div class="password-box">
 
-                    <small id="emailError"></small>
-                </div>
+                    <input type="password" id="loginPassword" placeholder="Password" required>
 
-                <div class="input-group password-box">
-                    <input type="password" id="loginPassword" class="password-box" placeholder="Enter Password"
-                        style="border: blue 1px solid;" required />
+                    <button type="button" class="eye-btn" onclick="toggleLoginPassword()">
 
-                    <img src="../images/hide.png" id="view" alt="hide" onclick="handleEyeClick()">
+                        👁️
 
-                    <small id="passwordError"></small>
-                </div>
-
-                <div class="remember-row">
-                    <label>
-                        <input type="checkbox" id="rememberMe" required />
-                        Remember Me
-                    </label>
-                    <a href="#register" class="forgot-password">
-                        Forgot Password?
-                    </a>
-                </div>
-
-                <button type="submit" onclick="loginUser()">
-                    Login <span id="spinner"></span>
-
-                </button>
-                <p style="margin-top: 20px; font-size: 18px; color: #555;">
-                    Don't have an account?
-                    <a href="#register">
-                        Register
-                    </a>
-                </p>
-
-            </div>
-
-            <button type="submit">
-                Login
-            </button>
-
-            <p>
-                Don't have an account?
-                <span onclick="showRegister()">
-                    Register
-                </span>
-            </p>
-
-        </form>
-
-        <!-- Register Form -->
-        <form id="registerForm">
-
-            <h2 style="color:#6474eb">Register</h2>
-
-            <input type="text" id="name" placeholder=" Enter Full Name" required>
-
-            <input type="email" id="registerEmail" placeholder=" EnterEmail Address" required>
-
-            <input type="text" id="registerMobile" placeholder=" Enter Mobile Number" required>
-
-            <div class="password-box">
-
-                        <label>
-                            <input type="radio" name="gender" value="Other">
-                            Other
-                        </label>
-                    </div>
-
-                    <div class="password-box">
-                        <input type="password" id="registerPassword" placeholder="Password" class="password-box"
-                            style="border: blue 1px solid;" required />
-
-                        <img src="../images/hide.png" id="vieww" onclick="toggleRegisterPassword()" />
-                    </div>
-
-
-                <input type="password" id="registerPassword" placeholder=" Enter Password" required>
-                <img src="./../images/hide.png" onclick="toggleRegisterPassword()" class="eye-icon" alt="hideicon"
-                    id="registerEye">
-
-                <button type="button" class="eye-btn" onclick="toggleRegisterPassword()">
-
-                    <i class="fa-solid fa-eye" id="registerEye"></i>
-
-                </button>
-
-            </div>
-
-            <button type="submit">
-                Register →
-            </button>
-
-            <p>
-                Already have an account?
-                <span onclick="showLogin()">
-                    Login
-                </span>
-            </p>
-
-        </form>
-
-    </div>
-
-    <script src="./../js/login.js"></script>
-                        <div id="strengthBar"></div>
-                    </div>
-
-                    <small>
-                        Password must contain:
-                        8 characters,
-                        1 number,
-                        1 special character
-                    </small>
-
-                    <div class="password-box">
-
-                        <input type="password" id="confirmPassword" placeholder="Confirm Password"
-                            style="border: blue 1px solid;" required />
-
-                        <img src="../images/hide.png" onclick="toggleConfirmPassword()" id="viewww" alt="hide"
-                            onclick="handleEyeClick()" />
-                    </div>
-
-                    <small id="confirmError"></small>
-
-                    <div class="terms">
-
-                        <input type="checkbox" id="terms">
-
-                        <label for="terms" style="color: #555; 
-      margin-top: 10px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
-                font-size: 18px;">
-                            I agree to Terms & Conditions
-                        </label>
-                    </div>
-
-                    <button onclick="registerUser()">
-                        Create Account
                     </button>
 
-                    <p style="color: #555; margin-top: 15px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
-                font-size: 19px;">
-
-                        Already have an account?
-
-                        <a href="#top">
-
-                            Login
-                        </a>
-                    </p>
                 </div>
-            </div>
+
+                <button type="submit">
+                    Login
+                </button>
+
+                <p>
+                    Don't have an account?
+                    <span onclick="showRegister()">
+                        Register
+                    </span>
+                </p>
+
+            </form>
+
+            <!-- Register Form -->
+            <form id="registerForm">
+
+                <h2>Register</h2>
+
+                <input type="text" id="name" placeholder="Full Name" required>
+
+                <input type="email" id="registerEmail" placeholder="Email Address" required>
+
+                <input type="text" id="registerMobile" placeholder="Mobile Number" required>
+
+                <div class="password-box">
+
+                    <input type="password" id="registerPassword" placeholder="Password" required>
+
+                    <button type="button" class="eye-btn" onclick="toggleRegisterPassword()">
+
+                        👁️
+
+                    </button>
+
+                </div>
+
+                <button type="submit">
+                    Register
+                </button>
+
+                <p>
+                    Already have an account?
+                    <span onclick="showLogin()">
+                        Login
+                    </span>
+                </p>
+
+            </form>
+
         </div>
+
     </div>
 
+
+    <script src="./../js/register.js"></script>
     <!-- footer -->
     <footer class="footer">
         <div class="footer-container">
@@ -303,7 +181,7 @@
             <p>© 2026 MegaStore. All Rights Reserved.</p>
         </div>
     </footer>
-    <script src="../js/login.js"></script>
+    <script src="./../js/login.js"></script>
 
 
 </body>

@@ -70,6 +70,10 @@ header .navbar {
     font-size: 1rem;
     transition: 0.3s;
 }
+.nav-links li{
+    display:flex;
+    align-items:center;
+}
 
 .nav-icon{
     width: 20px;
@@ -80,6 +84,18 @@ header .navbar {
 .nav-links a:hover{
     color: #3b82f6;
     transform: translateY(-2px);
+}
+ .login-btn{
+    border:2px solid #3b82f6;
+    color:white !important;
+    padding:8px 10px;
+    border-radius:25px;
+    background:transparent;
+}
+
+.login-btn:hover{
+    background:#3b82f6;
+    color:white !important;
 }
 
 /* responsive */
