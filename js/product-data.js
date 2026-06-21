@@ -252,7 +252,218 @@ const products = [
     "Router, AP & Repeater Modes"
 ]
     },
+     {
+        id: 13,
+        name: "Puma Men's Solid Slim Fit Cotton Essential Polo T-Shirt for Regular wear",
+        description: "The Puma ESS Logo Polo M T-Shirt is crafted from soft cotton fabric for all-day comfort and breathability. Featuring a slim-fit design, classic polo collar, and short sleeves, it offers a stylish and versatile look for everyday wear.",
+        originalPrice: 1699,
+        price: 764,
+        category: "fashion",
+        images: [
+            "https://m.media-amazon.com/images/I/711Q6K+E0gL._SX679_.jpg",
+            "https://m.media-amazon.com/images/I/51m-+ENqJuL._SX679_.jpg",
+            "https://m.media-amazon.com/images/I/61SDHP72xIL._SX679_.jpg",
+            "https://m.media-amazon.com/images/I/51CZTRgYxkL._SX679_.jpg",
+        ],
+     highlights: [
+    "100% Cotton Fabric",
+    "Slim Fit Design",
+    "Classic Polo Collar",
+    "Comfortable Short Sleeves",
+    "Lightweight & Breathable"
+]
+    },
     
+    {
+        id: 14,
+        name: "Women Rayon Slub Printed Kurta Top with Palazzo Set | Floral Design Casual Ethnic Co-Ord Set | 3/4 Sleeve Straight Kurti with Wide Leg Pants | Summer Wear for Women",
+        description: "This stylish co-ord set is crafted from soft and breathable Rayon Slub fabric for all-day comfort. Featuring an elegant blue floral printed kurta with a matching solid palazzo, it offers a relaxed fit that's perfect for daily wear, office wear, and casual outings.",
+        originalPrice: 1599,
+        price: 597,
+        category: "fashion",
+        images: [
+            "https://m.media-amazon.com/images/I/81DzgdPQXEL._SX679_.jpg",
+            "https://m.media-amazon.com/images/I/71xfD3aObOL._SY550_.jpg",
+            "https://m.media-amazon.com/images/I/71bwSTTGc1L._SY550_.jpg",
+            "https://m.media-amazon.com/images/I/71Z2gl1V2HL._SY741_.jpg",
+        ],
+     highlights: [
+    "Soft Rayon Slub Fabric",
+    "Elegant Floral Print Design",
+    "Kurta & Palazzo Co-Ord Set",
+    "Comfortable Relaxed Fit",
+    "Perfect for Daily & Office Wear"
+]
+    },
+    {
+        id: 15,
+        name: "Bacca Bucci Men Leather Sneaker Shoes",
+        description: "The Bacca Bucci Stride Eclipse Sneakers feature a classic low-top design with a premium leather finish for a stylish and durable look. Built with a comfortable flat sole and signature thick round laces, these sneakers offer all-day comfort while the striking black-and-white color combination adds a bold, modern touch.",
+        originalPrice: 2999,
+        price: 1599,
+        category: "fashion",
+        images: [
+            "https://m.media-amazon.com/images/I/51H7vGd5A-L._SY695_.jpg",
+            "https://m.media-amazon.com/images/I/61AvSUbLrHL._SY625_.jpg",
+            "https://m.media-amazon.com/images/I/81Ldn2GU-OL._SY575_.jpg",
+            "https://m.media-amazon.com/images/I/61EivDDDZxL._SY575_.jpg",
+        ],
+     highlights: [
+    "Classic Low-Top Design",
+    "Premium Leather Finish",
+    "Comfortable Flat Sole",
+    "Signature Thick Round Laces",
+    "Stylish Black & White Look"
+]
+    },
+     {
+        id: 16,
+        name: "Fostelo Women's Riverside Satchel Tote Handbag for Women | Ladies Purse | Stylish Shoulder Bag | Gift For Women",
+        description: "The Fostelo Women's Handbag is crafted from premium vegan leather with a soft, durable, and water-resistant finish. Featuring multiple spacious compartments and a versatile design, it can be used as a handbag, shoulder bag, tote, or crossbody, making it perfect for work, travel, shopping, and daily use.",
+        originalPrice: 2299,
+        price: 1099,
+        category: "fashion",
+        images: [
+            "https://m.media-amazon.com/images/I/81RRF-w1yVL._SY695_.jpg",
+            "https://m.media-amazon.com/images/I/81DPwF4SPZL._SY695_.jpg",
+            "https://m.media-amazon.com/images/I/81vCQwpqGXL._SY625_.jpg",
+            "https://m.media-amazon.com/images/I/811F87nSEjL._SY625_.jpg",
+        ],
+    highlights: [
+    "Premium Vegan Leather",
+    "Multiple Zipper Compartments",
+    "Water-Resistant & Durable",
+    "Handbag, Tote & Crossbody",
+    "Stylish & Spacious Design"
+]
+    },
     
+     {
+        id: 17,
+        name: "Majestic Man Stylish Slim Fit Cotton Spread Collar Checked Casual Shirt",
+        description: "This premium cotton checked shirt is crafted from pre-washed fabric for exceptional softness and long-lasting comfort. Featuring a regular spread collar, buttoned cuffs, and a classic checked pattern, it's perfect for casual outings, office wear, and weekend gatherings.",
+        originalPrice: 1499,
+        price: 499,
+        category: "fashion",
+        images: [
+            "https://m.media-amazon.com/images/I/81VasXJwfOL._SX679_.jpg",
+            "https://m.media-amazon.com/images/I/61UcbJVKUeL._SY550_.jpg",
+            "https://m.media-amazon.com/images/I/61dOW1sAT+L._SY550_.jpg",
+            "https://m.media-amazon.com/images/I/61ub7VI4qtL._SY741_.jpg",
+        ],
+        highlights: [
+    "Premium Pre-Washed Cotton",
+    "Soft & No-Shrink Fabric",
+    "Classic Checked Pattern",
+    "Regular Spread Collar",
+    "Comfortable Full Sleeves"
+]
+    },
+     {
+        id: 18,
+        name: "SIRIL Women's Tissue Silk Scalloped Border Sequins Embroidery Saree with Unstitched Blouse Piece",
+        description: "This elegant Tissue Silk Saree features beautiful sequins embroidery and a stylish scalloped border, creating a graceful and festive look. Paired with a matching unstitched blouse piece, it is perfect for weddings, parties, festive occasions, and traditional celebrations.",
+        originalPrice: 3999,
+        price: 1649,
+        category: "fashion",
+        images: [
+            "https://i.imgur.com/pPXBtrx.jpeg",
+            "https://m.media-amazon.com/images/I/81L+jy1bE5L._SY741_.jpg",
+            "https://m.media-amazon.com/images/I/81G5DSVSHFL._SY741_.jpg",
+            "https://m.media-amazon.com/images/I/81B4lTlhjHL._SY741_.jpg",
+        ],
+    highlights: [
+    "Premium Tissue Silk Fabric",
+    "Sequins Embroidery Work",
+    "Elegant Scalloped Border",
+    "Matching Unstitched Blouse",
+    "Perfect for Weddings & Festivals"
+]
+    },
+     {
+        id: 19,
+        name: "Centrino Women's Wedge Heel Sandals | Stylish Slip-On Sandals for Ladies | Soft Cushioned Footbed for Comfort | Elegant & Trendy Design | Lightweight and Durable Fashion Footwear",
+        description: "hese comfortable casual shoes feature a breathable upper, soft cushioned lining, and flexible sole for all-day comfort. Designed with non-slip grip technology and enhanced arch support, they provide stability, flexibility, and confidence with every step.",
+        originalPrice: 2499,
+        price: 699,
+        category: "fashion",
+        images: [
+            "https://m.media-amazon.com/images/I/719wjxDoNpL._SY695_.jpg",
+            "https://m.media-amazon.com/images/I/81sop++IwoL._SY695_.jpg",
+            "https://m.media-amazon.com/images/I/81wR9AchhjL._SY695_.jpg",
+            "https://m.media-amazon.com/images/I/7196d3mImTL._SY695_.jpg",
+        ],
+   highlights: [
+    "Breathable & Lightweight Upper",
+    "Non-Slip Grip Outsole",
+    "Soft Cushioned Lining",
+    "Arch Support Design",
+    "Flexible & Comfortable Sole"
+]
+    },
+     {
+        id: 20,
+        name: "EFERMONE® Polarized Sunglasses for Men and Women 100% UV Protection Outdoor Travelling Sports Bikes Cars Driving and Hiking (Square | Medium)",
+        description: "These stylish square-frame sunglasses feature premium polarized lenses and 100% UV protection for superior eye safety and visual clarity. Built with a durable frame and versatile design, they are perfect for driving, travelling, biking, hiking, and everyday outdoor use.",
+        originalPrice: 2999,
+        price: 499,
+        category: "fashion",
+        images: [
+            "https://m.media-amazon.com/images/I/61RCmuQRqjL._SX679_.jpg",
+            "https://m.media-amazon.com/images/I/71H1nV1NVTL._SX569_.jpg",
+            "https://m.media-amazon.com/images/I/71aDgIeWvRL._SX679_.jpg",
+            "https://m.media-amazon.com/images/I/81jnPLxc8BL._SX569_.jpg",
+        ],
+   highlights: [
+    "100% UV Protection",
+    "Premium Polarized Lenses",
+    "Classic Square Frame Design",
+    "Durable & Lightweight Build",
+    "Ideal for Outdoor Activities"
+]
+    },
+    {
+        id: 21,
+        name: "U.S. Polo Assn. Denim Co. Blue Solid Mid Rise Light Button Stretchable Cotton 1050 Men's Jeans",
+        description: "These Brandon Slim Tapered Jeans are crafted from a comfortable cotton blend fabric, offering a stylish retro look with a modern tapered fit. Designed for everyday versatility, they provide a sharp appearance and lasting comfort for casual and smart-casual occasions.",
+        originalPrice: 2299,
+        price: 1539,
+        category: "fashion",
+        images: [
+            "https://m.media-amazon.com/images/I/71r+Gyes4WL._SX569_.jpg",
+            "https://m.media-amazon.com/images/I/91W4QCUJLiL._SX569_.jpg",
+            "https://m.media-amazon.com/images/I/71CjvnIZx+L._SX569_.jpg",
+            "https://m.media-amazon.com/images/I/71o0V3lNh0L._SX569_.jpg",
+        ],
+  highlights: [
+    "Premium Cotton Blend Fabric",
+    "Slim Tapered Fit",
+    "Classic Retro Style",
+    "Comfortable All-Day Wear",
+    "Durable Zipper Closure"
+]
+    },
+    {
+        id: 22,
+        name: "EFERMONE® Polarized Sunglasses for Men and Women 100% UV Protection Outdoor Travelling Sports Bikes Cars Driving and Hiking (Square | Medium)",
+        description: "These stylish square-frame sunglasses feature premium polarized lenses and 100% UV protection for superior eye safety and visual clarity. Built with a durable frame and versatile design, they are perfect for driving, travelling, biking, hiking, and everyday outdoor use.",
+        originalPrice: 2999,
+        price: 499,
+        category: "fashion",
+        images: [
+            "https://m.media-amazon.com/images/I/A1XAaTuCcuL._SX679_.jpg",
+            "https://m.media-amazon.com/images/I/71H1nV1NVTL._SX569_.jpg",
+            "https://m.media-amazon.com/images/I/71aDgIeWvRL._SX679_.jpg",
+            "https://m.media-amazon.com/images/I/81jnPLxc8BL._SX569_.jpg",
+        ],
+   highlights: [
+    "100% UV Protection",
+    "Premium Polarized Lenses",
+    "Classic Square Frame Design",
+    "Durable & Lightweight Build",
+    "Ideal for Outdoor Activities"
+]
+    },
+   
 ];
 
