@@ -361,6 +361,9 @@ function rateProduct(rating) {
     if (!currentUser) {
 
         alert("Please Login First");
+        window.location.href =
+    "login.html";
+
         return;
 
     }
