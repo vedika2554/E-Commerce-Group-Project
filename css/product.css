@@ -103,6 +103,7 @@ body{
     box-shadow:0 5px 15px rgba(0,0,0,0.08);
     transition:0.3s;
     flex-shrink:0;
+    position: relative;
 }
 
 .card:hover{
@@ -245,3 +246,43 @@ body{
 }
 
 
+.card{
+    position: relative;
+}
+
+.wishlist-btn{
+
+    position: absolute;
+
+    top: 15px;
+
+    right: 15px;
+
+    width: 40px;
+
+    height: 40px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: white;
+
+    color: red;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    z-index: 100;
+
+    box-shadow:
+    0 2px 8px rgba(0,0,0,0.2);
+
+}
+
+.wishlist-btn:hover{
+
+    transform: scale(1.1);
+
+}

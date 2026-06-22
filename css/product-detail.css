@@ -221,7 +221,7 @@
     width:35px;
     height:35px;
     border:none;
-    border-radius:8px;
+    border-radius:18px;
     background:#2563eb;
     color:white;
     font-size:18px;
@@ -248,7 +248,7 @@
 .wishlist-btn{
     
     height:45px;
-    border-radius:8px;
+    border-radius:28px;
     font-size:15px;
     font-weight:600;
     cursor:pointer;
@@ -377,7 +377,7 @@
     margin-top:12px;
     padding:10px 20px;
     border:none;
-    border-radius:8px;
+    border-radius:28px;
     background:#2563eb;
     color:white;
     font-size:14px;

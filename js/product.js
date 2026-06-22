@@ -1,3 +1,14 @@
+let product;
+function setWishlistProduct(id){
+
+    product =
+    products.find(
+    item => item.id === id
+    );
+
+    addToWishlist();
+
+}
 const container =
 document.getElementById("productsContainer");
 
@@ -19,7 +30,13 @@ function displayProducts(data){
         container.innerHTML += `
         
         <div class="card">
+<button
+class="wishlist-btn"
+onclick="setWishlistProduct(${product.id})">
 
+    <i class="fa-solid fa-heart"></i>
+
+</button>
             <img src="${product.images[0]}">
 
             <h3>${product.name}</h3>
@@ -173,3 +190,20 @@ if(category){
 
 }
 
+function addToWishlist()
+ { let currentUser = JSON.parse(localStorage.getItem("currentUser")); 
+    if (!currentUser) {
+         alert("Please Login First");
+          return; } 
+          let wishlistKey = "wishlist_" + currentUser.mobile; 
+          let wishlist = JSON.parse(localStorage.getItem(wishlistKey)) || []; 
+          let alreadyExists = wishlist.find(item => item.id === product.id); 
+          if (alreadyExists) { alert("Product Already In Wishlist ❤️"); 
+            window.location.href = "wishlist.html";
+             return; } 
+            wishlist.push(product); 
+            localStorage.setItem(wishlistKey, 
+                JSON.stringify(wishlist)); 
+                alert("Added To Wishlist ❤️"); 
+                window.location.href = "wishlist.html"; 
+            }

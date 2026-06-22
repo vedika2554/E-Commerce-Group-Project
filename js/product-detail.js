@@ -1,84 +1,84 @@
 const productId =
-localStorage.getItem(
-"selectedProduct"
-);
+    localStorage.getItem(
+        "selectedProduct"
+    );
 
 const product =
-products.find(
-p => p.id == productId
-);
+    products.find(
+        p => p.id == productId
+    );
 
-if(!product){
+if (!product) {
 
     alert(
-    "Product Not Found"
+        "Product Not Found"
     );
 
     window.location.href =
-    "products.html";
-    
+        "products.html";
+
 
 }
 
 /* Product Details */
 
 document.getElementById(
-"productName"
+    "productName"
 ).innerText =
-product.name;
+    product.name;
 
 document.getElementById(
-"originalPrice"
+    "originalPrice"
 ).innerText =
-"₹" +
-product.originalPrice.toLocaleString();
+    "₹" +
+    product.originalPrice.toLocaleString();
 
 document.getElementById(
-"productPrice"
+    "productPrice"
 ).innerText =
-"₹" +
-product.price.toLocaleString();
+    "₹" +
+    product.price.toLocaleString();
 
 const discount =
-Math.round(
+    Math.round(
 
-(
-product.originalPrice -
-product.price
+        (
+            product.originalPrice -
+            product.price
 
-)
+        )
 
-/
+        /
 
-product.originalPrice
+        product.originalPrice
 
-* 100
+        * 100
 
-);
-
-document.getElementById(
-"discount"
-).innerText =
-discount + "% OFF";
+    );
 
 document.getElementById(
-"description"
+    "discount"
 ).innerText =
-product.description;
+    discount + "% OFF";
+
+document.getElementById(
+    "description"
+).innerText =
+    product.description;
 
 /* Main Image */
 
 document.getElementById(
-"mainImage"
+    "mainImage"
 ).src =
-product.images[0];
+    product.images[0];
 
 /* Thumbnails */
 
 const thumbnails =
-document.getElementById(
-"thumbnails"
-);
+    document.getElementById(
+        "thumbnails"
+    );
 
 product.images.forEach(image => {
 
@@ -94,10 +94,10 @@ product.images.forEach(image => {
 
 /* Change Image */
 
-function changeImage(image){
+function changeImage(image) {
 
     document.getElementById(
-    "mainImage"
+        "mainImage"
     ).src = image;
 
 }
@@ -105,9 +105,9 @@ function changeImage(image){
 /* Highlights */
 
 const highlights =
-document.getElementById(
-"highlights"
-);
+    document.getElementById(
+        "highlights"
+    );
 
 product.highlights.forEach(item => {
 
@@ -125,27 +125,27 @@ product.highlights.forEach(item => {
 
 let quantity = 1;
 
-function increaseQty(){
+function increaseQty() {
 
     quantity++;
 
     document.getElementById(
-    "qty"
+        "qty"
     ).innerText =
-    quantity;
+        quantity;
 
 }
 
-function decreaseQty(){
+function decreaseQty() {
 
-    if(quantity > 1){
+    if (quantity > 1) {
 
         quantity--;
 
         document.getElementById(
-        "qty"
+            "qty"
         ).innerText =
-        quantity;
+            quantity;
 
     }
 
@@ -153,34 +153,34 @@ function decreaseQty(){
 
 /* Buy Now */
 
-function buyNow(){
+function buyNow() {
 
     let currentUser =
-    JSON.parse(
-    localStorage.getItem(
-    "currentUser"
-    )
-    );
+        JSON.parse(
+            localStorage.getItem(
+                "currentUser"
+            )
+        );
 
-    if(!currentUser){
+    if (!currentUser) {
 
         alert(
-        "Please Login First"
+            "Please Login First"
         );
 
         return;
     }
 
     let orderKey =
-    "orders_" +
-    currentUser.mobile;
+        "orders_" +
+        currentUser.mobile;
 
     let orders =
-    JSON.parse(
-    localStorage.getItem(
-    orderKey
-    )
-    ) || [];
+        JSON.parse(
+            localStorage.getItem(
+                orderKey
+            )
+        ) || [];
 
     orders.push({
 
@@ -201,115 +201,58 @@ function buyNow(){
         orderKey,
 
         JSON.stringify(
-        orders
+            orders
         )
 
     );
 
     alert(
-    "Order Placed Successfully"
+        "Order Placed Successfully"
     );
 
     window.location.href =
-    "orders.html";
+        "orders.html";
 
 }
 
-/* Wishlist */
+function addToWishlist()
+ { let currentUser = JSON.parse(localStorage.getItem("currentUser")); 
+    if (!currentUser) {
+         alert("Please Login First");
+          return; } 
+          let wishlistKey = "wishlist_" + currentUser.mobile; 
+          let wishlist = JSON.parse(localStorage.getItem(wishlistKey)) || []; 
+          let alreadyExists = wishlist.find(item => item.id === product.id); 
+          if (alreadyExists) { alert("Product Already In Wishlist ❤️"); 
+            window.location.href = "wishlist.html";
+             return; } 
+            wishlist.push(product); 
+            localStorage.setItem(wishlistKey, 
+                JSON.stringify(wishlist)); 
+                alert("Added To Wishlist ❤️"); 
+                window.location.href = "wishlist.html"; 
+            }
 
-function addToWishlist(){
-
-    let currentUser =
-    JSON.parse(
-    localStorage.getItem(
-    "currentUser"
-    )
-    );
-
-    if(!currentUser){
-
-        alert(
-        "Please Login First"
-        );
-
-        return;
-    }
-
-    let wishlistKey =
-    "wishlist_" +
-    currentUser.mobile;
-
-    let wishlist =
-    JSON.parse(
-    localStorage.getItem(
-    wishlistKey
-    )
-    ) || [];
-
-    let alreadyExists =
-    wishlist.find(
-
-    item =>
-
-    item.id ===
-    product.id
-
-    );
-
-    if(alreadyExists){
-
-        alert(
-        "Product Already In Wishlist ❤️"
-        );
-
-        window.location.href =
-        "wishlist.html";
-
-        return;
-
-    }
-
-    wishlist.push(
-    product
-    );
-
-    localStorage.setItem(
-
-        wishlistKey,
-
-        JSON.stringify(
-        wishlist
-        )
-
-    );
-
-    alert(
-    "Added To Wishlist ❤️"
-    );
-
-    window.location.href =
-    "wishlist.html";
-
-}
+            
 let selectedRating = 0;
-function rateProduct(rating){
+function rateProduct(rating) {
 
     selectedRating = rating;
 
     const stars =
-    document.querySelectorAll(".star");
+        document.querySelectorAll(".star");
 
-    stars.forEach((star,index)=>{
+    stars.forEach((star, index) => {
 
-        if(index < rating){
+        if (index < rating) {
 
             star.classList.remove("fa-regular");
-            star.classList.add("fa-solid","active");
+            star.classList.add("fa-solid", "active");
 
         }
-        else{
+        else {
 
-            star.classList.remove("fa-solid","active");
+            star.classList.remove("fa-solid", "active");
             star.classList.add("fa-regular");
 
         }
@@ -317,18 +260,18 @@ function rateProduct(rating){
     });
 
     document.getElementById(
-    "ratingText"
+        "ratingText"
     ).innerText =
-    "You Rated " + rating + " ⭐";
+        "You Rated " + rating + " ⭐";
 
-}function submitReview(){
+} function submitReview() {
 
     let currentUser =
-    JSON.parse(
-    localStorage.getItem("currentUser")
-    );
+        JSON.parse(
+            localStorage.getItem("currentUser")
+        );
 
-    if(!currentUser){
+    if (!currentUser) {
 
         alert("Please Login First");
         return;
@@ -336,9 +279,9 @@ function rateProduct(rating){
     }
 
     const reviewText =
-    document.getElementById("reviewText").value;
+        document.getElementById("reviewText").value;
 
-    if(reviewText.trim() === ""){
+    if (reviewText.trim() === "") {
 
         alert("Write a review first");
         return;
@@ -355,12 +298,12 @@ function rateProduct(rating){
     };
 
     let reviewKey =
-    "reviews_" + product.id;
+        "reviews_" + product.id;
 
     let reviews =
-    JSON.parse(
-    localStorage.getItem(reviewKey)
-    ) || [];
+        JSON.parse(
+            localStorage.getItem(reviewKey)
+        ) || [];
 
     reviews.push(review);
 
@@ -370,25 +313,25 @@ function rateProduct(rating){
     );
 
     document.getElementById(
-    "reviewText"
+        "reviewText"
     ).value = "";
 
     displayReviews();
 
-}function displayReviews(){
+} function displayReviews() {
 
     let reviewKey =
-    "reviews_" + product.id;
+        "reviews_" + product.id;
 
     let reviews =
-    JSON.parse(
-    localStorage.getItem(reviewKey)
-    ) || [];
+        JSON.parse(
+            localStorage.getItem(reviewKey)
+        ) || [];
 
     const container =
-    document.getElementById(
-    "reviewsContainer"
-    );
+        document.getElementById(
+            "reviewsContainer"
+        );
 
     container.innerHTML = "";
 
@@ -424,15 +367,15 @@ setInterval(() => {
 
     currentIndex++;
 
-    if(currentIndex >= product.images.length){
+    if (currentIndex >= product.images.length) {
 
         currentIndex = 0;
 
     }
 
     document.getElementById(
-    "mainImage"
+        "mainImage"
     ).src =
-    product.images[currentIndex];
+        product.images[currentIndex];
 
 }, 2000);

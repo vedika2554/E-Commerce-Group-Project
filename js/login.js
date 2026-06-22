@@ -170,4 +170,3 @@ themeToggle.addEventListener("click", () => {
         themeIcon.src = "../images/moon.png";
     }
 });
-
