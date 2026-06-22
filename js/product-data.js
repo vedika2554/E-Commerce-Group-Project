@@ -1053,5 +1053,239 @@ highlights: [
     "Refreshing & Skin Brightening"
 ]
     },
+    
+  {
+        id: 50,
+        name: "LAKMÉ Powerplay Priming Foundation Liquid, Natural, Flawless Finish, Medium To Full Coverage, Built in Primer, Long Lasting, SPF 20, Warm Natural, 25ml",
+        description: "Lakmé 9to5 Powerplay Priming Foundation combines the benefits of a built-in primer and matte foundation to deliver a smooth, natural, and flawless finish. With medium-to-high buildable coverage, SPF 20 protection, and a long-wear formula, it keeps your skin looking fresh and even-toned throughout the day.",
+        originalPrice:475,
+        price: 336,
+        category: "beauty",
+        images: [
+            "https://m.media-amazon.com/images/I/51gHh3Ate0L._SL1000_.jpg",
+            "https://m.media-amazon.com/images/I/61p2HKYvhKL._SL1000_.jpg",
+            "https://m.media-amazon.com/images/I/51AeybkR4zL._SL1000_.jpg",
+            "https://m.media-amazon.com/images/I/61ctOwl15GL._SL1000_.jpg",
+        ],
+  highlights: [
+    "Built-In Primer + Foundation",
+    "Natural Matte Finish",
+    "Medium to High Coverage",
+    "SPF 20 Sun Protection",
+    "Long-Lasting Wear Formula"
+]
+    },
+    {
+        id: 51,
+        name: "L'Oreal Paris Total Repair 5 Shampoo, For Repairing 5 Signs Of Damaged Hair, With Keratin Xs | 800Ml",
+        description: "L'Oréal Paris Total Repair 5 Shampoo is specially formulated to repair and strengthen damaged hair while addressing the five visible signs of hair damage—hair fall, dryness, roughness, dullness, and split ends. Enriched with Pro-Keratin and Ceramide, it nourishes hair fibers, leaving them smoother, stronger, softer, and visibly healthier.",
+        originalPrice:849,
+        price:575 ,
+        category: "beauty",
+        images: [
+            "https://m.media-amazon.com/images/I/41v6C99P8ZL._SL1080_.jpg",
+            "https://m.media-amazon.com/images/I/61RafejMf9L._SL1080_.jpg",
+            "https://m.media-amazon.com/images/I/619hLTgGfOL._SL1080_.jpg",
+            "https://m.media-amazon.com/images/I/61rKoIu932L._SL1080_.jpg",
+        ],
+  highlights: [
+    "Repairs 5 Signs of Hair Damage",
+    "Enriched with Pro-Keratin",
+    "Strengthens Hair Fibers",
+    "Reduces Dryness & Roughness",
+    "Leaves Hair Soft & Shiny"
+]
+    },
+    {
+        id: 52,
+        name: "Ramsons - U R LOVELY Eau De Parfum | 30 ML | Perfume For Women | TN - Bergamot, Peach, Orange, Grapefruit, Aquatic | MN - Lilly of the valley, Rose, Jasmine, Cinnamon | BN - Woody, Musk, Vanilla",
+        description: "U R Lovely Eau De Parfum is a premium fragrance for women that blends refreshing fruity and green notes with elegant floral jasmine and warm musk-vanilla undertones. Designed for long-lasting freshness, it delivers a sophisticated and captivating aroma that keeps you feeling confident throughout the day.",
+        originalPrice:175,
+        price: 135,
+        category: "beauty",
+        images: [
+            "https://m.media-amazon.com/images/I/51F0w9n6y5L._SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/51S4v1QVMTL._SL1080_.jpg",
+            "https://m.media-amazon.com/images/I/61PBd77EpCL._SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/610ZweQP32L._SL1500_.jpg",
+        ],
+  highlights: [
+     "Long-Lasting Premium Fragrance",
+    "Refreshing Fruity Top Notes",
+    "Elegant Floral Jasmine Heart",
+    "Warm Musk & Vanilla Base",
+    "Perfect for Everyday & Special Occasions"
+]
+    },
+    {
+        id: 53,
+        name: "NIVEA Nourishing Body Milk 600ml Body Lotion with Hyaluronic Acid | 72Hr Hydration | Deep Moisture Care for Very Dry Skin | Enriched with Almond Oil | Smooth, Radiant & Healthy Looking Skin Care",
+        description: "NIVEA Deep Moisture Body Lotion is enriched with Deep Moisture Serum, Almond Oil, and Vitamin E to provide intense hydration and nourishment for very dry skin. Its fast-absorbing formula helps repair dryness from deep within, leaving the skin soft, smooth, and moisturized for up to 48 hours.",
+        originalPrice:799,
+        price: 362,
+        category: "beauty",
+        images: [
+            "https://m.media-amazon.com/images/I/61oRWpJlTVL._SL1000_.jpg",
+            "https://m.media-amazon.com/images/I/51pZ+Tl7RrL._SL1000_.jpg",
+            "https://m.media-amazon.com/images/I/61R5EUtcv5L._SL1000_.jpg",
+            "https://m.media-amazon.com/images/I/51ulnm2BmFL._SL1000_.jpg",
+        ],
+  highlights: [
+     "48-Hour Deep Moisturization",
+    "Enriched with Almond Oil",
+    "Contains Nourishing Vitamin E",
+    "Repairs Dry & Rough Skin",
+    "Suitable for Daily Use"
+]
+    },
+    {
+        id: 54,
+        name: "LAKMÉ LAKM Lakme Powerplay Priming Matte Lipstick, Smooth Finish, Lightweight Smudgeproof, Lasts 16hrs, Hydrates Lips, Burgundy Passion, 3.6g",
+        description: "This long-lasting matte lipstick delivers intense color payoff with a smooth, comfortable finish that lasts up to 14 hours. Infused with 2X primer technology, it glides effortlessly on the lips, providing a flawless matte look without the need for frequent touch-ups.",
+        originalPrice:625,
+        price: 325,
+        category: "beauty",
+        images: [
+            "https://m.media-amazon.com/images/I/51hrMevDh2L._SL1200_.jpg",
+            "https://m.media-amazon.com/images/I/41ymlWQsMPL._SL1200_.jpg",
+            "https://m.media-amazon.com/images/I/61zi2bFQhyL._SL1200_.jpg",
+            "https://m.media-amazon.com/images/I/61UOtyCDo1L._SL1200_.jpg",
+        ],
+  highlights: [
+     "Up to 14 Hours Matte Wear",
+    "2X Primer-Enriched Formula",
+    "Intense Color Payoff",
+    "Smooth & Comfortable Application",
+    "No Frequent Touch-Ups Needed"
+]
+    },
+    {
+        id: 55,
+        name: "TRESemme Keratin Smooth Conditioner 190ml With Keratin Protein and Argan Oil | Salon-Like Smooth Hair | Up To 72H Frizz Contro",
+        description: "TRESemmé Keratin Smooth Shampoo is specially formulated with Keratin Protein and Argan Oil to deliver salon-like smoothness and frizz control for up to 72 hours. Powered by patented Micro-Smooth Technology, it nourishes hair deeply, leaving it silky, manageable, and beautifully smooth every day.",
+        originalPrice:220,
+        price: 206,
+        category: "beauty",
+        images: [
+            "https://m.media-amazon.com/images/I/51CQAIkoEEL._SL1000_.jpg",
+            "https://m.media-amazon.com/images/I/515GYrCT6oL._SL1000_.jpg",
+            "https://m.media-amazon.com/images/I/61tiODbRDwL._SL1000_.jpg",
+            "https://m.media-amazon.com/images/I/61-7853LTVL._SL1000_.jpg",
+        ],
+  highlights: [
+    "Up to 72 Hours Frizz Control",
+    "Infused with Keratin & Argan Oil",
+    "Patented Micro-Smooth Technology",
+    "Salon-Like Smooth Hair",
+    "100% Paraben-Free Formula"
+]
+    },
+    {
+        id: 56,
+        name: "Vaseline Gluta-Hya Flawless Glow Lotion for Face & Body | Gives Brighter Skin | Glutathione & Pro-Retinol Infused Moisturizer, 200ml",
+        description: "Vaseline Gluta-Hya Serum Burst Lotion is a lightweight, fast-absorbing moisturizer that helps brighten dull skin while providing deep hydration. Enriched with Glutathione, Pro-Retinol, and Hyaluron, it nourishes, smoothens, and enhances skin radiance, leaving your skin soft, even-toned, and glowing from the first use.",
+        originalPrice:350,
+        price:250 ,
+        category: "beauty",
+        images: [
+            "https://m.media-amazon.com/images/I/51tw0F-idVL._SL1000_.jpg",
+            "https://m.media-amazon.com/images/I/51ziskaxkPL._SL1000_.jpg",
+            "https://m.media-amazon.com/images/I/51lO7HMYssL._SL1000_.jpg",
+            "https://m.media-amazon.com/images/I/613wH4bFiwL._SL1000_.jpg",
+        ],
+  highlights: [
+      "GlutaGlow Brightening Technology",
+    "Enriched with Glutathione",
+    "Contains Pro-Retinol & Hyaluron",
+    "Deep Hydration & Skin Glow",
+    "Non-Sticky & Fast Absorbing"
+]
+    },
+    {
+        id: 57,
+        name: "Lakme SPF 50 PA++++ Sunscreen Lotion for Bright Skin | In Vivo Tested | UVA UVB Blue Light Protection | Waterlight| No White Cast | Niacinamide| For All Skin Types | 100 ml",
+        description: "This SPF 50 PA++++ sunscreen is clinically tested to provide advanced protection against UVA, UVB, and blue light exposure. Enriched with a brightening complex and Squalane, it helps reduce tanning, improve skin tone, strengthen the moisture barrier, and deliver a lightweight matte finish with no white cast.",
+        originalPrice:669,
+        price: 331,
+        category: "beauty",
+        images: [
+            "https://m.media-amazon.com/images/I/51+gSgH2c4L._SL1000_.jpg",
+            "https://m.media-amazon.com/images/I/61L8kyGEFQL._SL1000_.jpg",
+            "https://m.media-amazon.com/images/I/61M95PqeiFL._SL1000_.jpg",
+            "https://m.media-amazon.com/images/I/71mvsZptd+L._SL1000_.jpg",
+        ],
+  highlights: [
+    "SPF 50 PA++++ Protection",
+    "Helps Reduce Tan & Dark Spots",
+    "Invisible Matte Finish",
+    "No White Cast Formula",
+    "Squalane for Barrier Repair"
+]
+    },
+    {
+        id: 58,
+        name: "Lakme 9to5 Hya Matte Pressed Powder Ivory 9gm",
+        description: "Lakmé Hya Matte Pressed Powder is a hydrating compact powder infused with Hyaluronic Acid that delivers a smooth, breathable matte finish while keeping skin comfortable throughout the day. With up to 16 hours of oil control and buildable coverage, it helps blur pores, fine lines, and imperfections for a flawless, natural-looking complexion.",
+        originalPrice:699,
+        price:503 ,
+        category: "beauty",
+        images: [
+            "https://m.media-amazon.com/images/I/610n6ih9jrL._SL1000_.jpg",
+            "https://m.media-amazon.com/images/I/61qCCRzeA4L._SL1000_.jpg",
+            "https://m.media-amazon.com/images/I/41DD5vGY2LL._SL1000_.jpg",
+            "https://m.media-amazon.com/images/I/618nq0w4iFL._SL1000_.jpg",
+        ],
+  highlights: [
+    "Infused with Hyaluronic Acid",
+    "Up to 16 Hours Oil Control",
+    "Smooth Matte Finish",
+    "Blurs Pores & Fine Lines",
+    "Medium to Buildable Coverage"
+]
+    },
+    {
+        id:59 ,
+        name: "Streax Frizz Control Hair Serum for Dry Frizzy Hair- 100 ml, 72hrs Frizz Free Hair, For Women & Men, With Bio – Elixir, 84% Frizz Reduction & 11X smoothness",
+        description: "Streax Frizz Control Hair Serum is specially formulated to tame dry, frizzy hair while delivering intense nourishment and shine. Enriched with the Bio-Elixir Complex and a blend of 12 nutrient-rich oils, it helps reduce frizz, smoothen hair, and enhance manageability without leaving a greasy residue, making it perfect for everyday use.",
+        originalPrice:320,
+        price:220 ,
+        category: "beauty",
+        images: [
+            "https://m.media-amazon.com/images/I/51OYUiuvyvL._SL1000_.jpg",
+            "https://m.media-amazon.com/images/I/61O68YsWuDL._SL1000_.jpg",
+            "https://m.media-amazon.com/images/I/71+WItznUCL._SL1500_.jpg",
+            "https://m.media-amazon.com/images/I/71cLMbgemXL._SL1500_.jpg",
+        ],
+  highlights: [
+     "Controls Frizz & Dryness",
+    "Enriched with Bio-Elixir Complex",
+    "12 Nourishing Natural Oils",
+    "Lightweight Non-Greasy Formula",
+    "Suitable for All Hair Types"
+]
+    },
+    {
+        id:60 ,
+        name: "NIVEA Pearl and Beauty 50ml Deo Underarm Roll On | With Pearl Extracts & Avocado Oil | 72 H Long Lasting Floral Scent | 0% Alcohol and Dermat Approved | For Women",
+        description: "This gentle deodorant provides up to 48 hours of odor protection while keeping you feeling fresh and confident throughout the day. Enriched with pearl extracts and anti-microbial agents, it helps maintain even-toned underarms, controls odor-causing bacteria, and cares for delicate skin with its alcohol-free formula.",
+        originalPrice:249,
+        price: 149,
+        category: "beauty",
+        images: [
+            "https://m.media-amazon.com/images/I/41D6xYA74xL._SL1000_.jpg",
+            "https://m.media-amazon.com/images/I/61hHAA2YkLL._SL1000_.jpg",
+            "https://m.media-amazon.com/images/I/61OFA+Y89-L._SL1000_.jpg",
+            "https://m.media-amazon.com/images/I/51SBWtqp0RL._SL1000_.jpg",
+        ],
+  highlights: [
+    "48-Hour Odor Protection",
+    "Enriched with Pearl Extracts",
+    "Alcohol-Free Gentle Formula",
+    "Helps Maintain Even Skin Tone",
+    "Long-Lasting Fresh Fragrance"
+]
+    },  
+    
+   
 ];
 
